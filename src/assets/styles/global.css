@@ -49,10 +49,6 @@ header {
   display: none;
 }
 
-main {
-  height: 350px;
-}
-
 @media (max-width: 768px) {
   .menu {
     width: 100vw;
