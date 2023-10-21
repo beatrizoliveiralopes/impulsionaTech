@@ -12,49 +12,54 @@ header {
 }
 
 #banner {
-    height: 90vh;
-    max-width: 1350px;
+    max-width: 1300px;
     margin: 0 auto;
+    height: 90vh;
+    position: relative;
+}
+
+.banner-wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    width: 100%;
 }
 
 .banner-information {
-    height: 100%;
     width: 40%;
+    height: 100%;
+    margin-left: 4rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
-    gap: 45px;
+    gap: 2rem;
     color: #FFFFFF;
-}
-
-.banner-title,
-.banner-text {
-    text-align: justify;
-    width: 95%;
 }
 
 .banner-title {
     font-weight: 700;
-    font-size: 78px;
+    font-size: 72px;
     line-height: 1;
 }
 
 .banner-text {
-    width: 85%;
     font-size: 25px;
+    text-align: justify;
 }
 
 .banner-image {
-    height: 100%;
     width: 60%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+.banner-image img {
+    width: 620px;
 }
 
 .content {
     width: 100%;
-    margin: 20px 0;
+    margin: 1.25rem 0;
     padding: 2.5rem 0;
     overflow: hidden;
 }
@@ -67,7 +72,7 @@ header {
 .carousel-row-title {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: .5rem;
     color: black;
 }
 
@@ -97,7 +102,7 @@ header {
     right: auto;
     bottom: 0;
     z-index: 2;
-    width: 40px;
+    width: 2.5rem;
     cursor: pointer;
     border: none;
     background: linear-gradient(to left, transparent 0%, black 200%);
@@ -118,7 +123,7 @@ header {
 
 .fa-chevron-left,
 .fa-chevron-right {
-    height: 25px;
+    height: 1.5rem;
     color: #FFFFFF;
 }
 
@@ -144,14 +149,14 @@ header {
     height: 100%;
     display: flex;
     flex-wrap: nowrap;
-    gap: 15px;
+    gap: 1rem;
 }
 
 .slider-item {
     cursor: pointer;
     flex-shrink: 0;
-    width: 400px;
-    height: 250px;
+    width: 25rem;
+    height: 15rem;
     border-radius: 0.5rem;
     overflow: hidden;
     position: relative;
@@ -166,14 +171,14 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
-    height: 165px;
+    height: 10rem;
     width: 100%;
 }
 
 .item-information {
-    height: 85px;
+    height: 5rem;
     width: 100%;
-    padding: 10px 20px;
+    padding: .5rem 1.25rem;
     line-height: 2rem;
 }
 
