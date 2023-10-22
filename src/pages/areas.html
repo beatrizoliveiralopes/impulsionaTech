@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="../assets/styles/areas.css">
 
   <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
+  <script src="https://kit.fontawesome.com/ade55217c4.js" crossorigin="anonymous"></script>
 
   <title>Impulsiona Tech</title>
 </head>
@@ -33,10 +34,10 @@
     </nav>
   </header>
   <main>  
-    <span class="titulo">
+    <span><br>
       <h2>ÁREAS DA TECNOLOGIA DA INFORMAÇÃO</h2><br>
     </span>
-    <span>Segue abaixo algumas áreas da tecnologia da informação.</span>
+    <!-- <span>Segue abaixo algumas áreas da tecnologia da informação.</span> -->
       <section class="container">
         <section class="card__container">
           <div class="card__bx" style="--clr: #89ec5b">
@@ -80,7 +81,8 @@
               </div>
               <div class="card__content">
                 <h4>DEVOPS</h4>
-                <p>É a área responsável por aplicar um conjunto de práticas e processos que visam acelerar e automatizar aspectos dos processos de desenvolvimento, testes e lançamento de softwares, sites e aplicativos, permitindo a entrega contínua e atualizações de segurança. </p>                
+                <p>É a área responsável por aplicar um conjunto de práticas e processos que visam acelerar e automatizar aspectos dos processos de desenvolvimento, testes e lançamento de softwares.
+                  <!-- , sites e aplicativos, permitindo a entrega contínua e atualizações de segurança. </p>                 -->
               </div>
             </div>
           </div>
@@ -92,7 +94,8 @@
               </div>
               <div class="card__content">
                 <h4>ÁNALISE DE DADOS</h4>
-                <p>É a área que transforma números e informações em insights para a tomada de decisão, utilizando de técnicas estatísticas e lógicas. Apesar de ser usada em diferentes áreas, é no universo corporativo que a técnica ganha destaque.</p>                
+                <p>É a área que transforma números e informações em insights para a tomada de decisão, utilizando de técnicas estatísticas e lógicas. 
+                  <!-- Apesar de ser usada em diferentes áreas, é no universo corporativo que a técnica ganha destaque.</p>                 -->
               </div>
             </div>
           </div>
@@ -105,7 +108,7 @@
               <div class="card__content">
                 <h4>SEGURANÇA DA INFORMAÇÃO</h4>
                 <p>É a área da informática que tem a missão de proteger todas as informações e dados que circulam na rede.
-                   A segurança da informação está fundamentada em quatro pilares: confidencialidade, integridade, disponibilidade e autenticidade.
+                   <!-- A segurança da informação está fundamentada em quatro pilares: confidencialidade, integridade, disponibilidade e autenticidade. -->
                 </p>
               </div>
             </div>
@@ -137,5 +140,17 @@
     </div>
     <span>© Copyright 2023 - Impulsiona Tech. - Todos os direitos reservados.</span>
   </footer>
+  <script>
+    function mostarMenuFluante() {
+      let menu = document.querySelector('.menu');
+      let buttonMenu =  document.querySelector('.button-menu');
+      menu.classList.toggle('expanded-menu');
+      if(menu.classList.contains('expanded-menu')) {
+        buttonMenu.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+      } else {
+        buttonMenu.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      }
+    }
+  </script>
 </body>
 </html>

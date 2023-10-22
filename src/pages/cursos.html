@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="../assets/styles/cursos.css">
 
   <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
+  <script src="https://kit.fontawesome.com/ade55217c4.js" crossorigin="anonymous"></script>
 
   <title>Impulsiona Tech</title>
 </head>
@@ -31,9 +32,9 @@
     </nav>
   </header>
   <main>  
-    <section><br>
+    <section class="titulo">
       <h1>CURSOS DE TECNOLOGIA</h1><br>
-      <span>Alguns cursos de tecnologia disponíveis gratuitamente. Excelentes para você iniciar sua carreira.</span><br><br><br>
+      <!-- <span>Alguns cursos de tecnologia disponíveis gratuitamente. Excelentes para você iniciar sua carreira.</span><br><br><br> -->
       <h2>FRONT-END</h2><br>
     </section>
 
@@ -134,5 +135,17 @@
     </div>
     <span>© Copyright 2023 - Impulsiona Tech. - Todos os direitos reservados.</span>
   </footer>
+  <script>
+    function mostarMenuFluante() {
+      let menu = document.querySelector('.menu');
+      let buttonMenu =  document.querySelector('.button-menu');
+      menu.classList.toggle('expanded-menu');
+      if(menu.classList.contains('expanded-menu')) {
+        buttonMenu.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+      } else {
+        buttonMenu.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      }
+    }
+  </script>
 </body>
 </html>
