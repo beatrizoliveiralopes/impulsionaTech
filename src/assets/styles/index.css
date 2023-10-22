@@ -13,10 +13,20 @@ header {
 
 #banner {
     max-width: 1300px;
+    width: 100%;
     margin: 0 auto;
     height: 90vh;
+    display: flex;
     position: relative;
 }
+
+@media (max-width: 768px) {
+    #banner {
+        max-width: 680px;
+        margin: 0 auto;
+    }
+}
+
 
 .banner-wrapper {
     display: flex;
@@ -24,37 +34,79 @@ header {
     width: 100%;
 }
 
+@media (max-width: 768px) {
+    .banner-wrapper {
+        flex-direction: column;
+    }
+}
+
 .banner-information {
-    width: 40%;
-    height: 100%;
-    margin-left: 4rem;
+    width: 41%;
     display: flex;
-    justify-content: flex-end;
     flex-direction: column;
+    justify-content: center;
     gap: 2rem;
     color: #FFFFFF;
+    margin-left: 10rem;
+}
+
+@media (max-width: 768px) {
+    .banner-information {
+        width: 100%;
+        margin: 0;
+        padding: 100px clamp(15px, 7vw, 20px);
+    }
 }
 
 .banner-title {
+    max-width: 30rem;
+    width: 100%;
     font-weight: 700;
-    font-size: 72px;
+    font-size: clamp(1rem, 4vw, 4rem);
     line-height: 1;
 }
 
+@media (max-width: 768px) {
+    .banner-title {
+        max-width: 470px;
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+}
+
 .banner-text {
-    font-size: 25px;
+    max-width: 25rem;
+    font-size: clamp(.5rem, 1.5vw, 1.2rem);
     text-align: justify;
 }
 
+@media (max-width: 768px) {
+    .banner-text {
+        max-width: 35rem;
+        width: 100%;
+        font-size: 1rem;
+    }
+}
+
 .banner-image {
-    width: 60%;
-    overflow: hidden;
+    width: 59%;
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
+    margin-right: 10rem;
 }
+
+@media (max-width: 768px) {
+    .banner-image {
+        display: none;
+    }
+}
+
 .banner-image img {
-    width: 620px;
+    max-width: 620px;
+    width: 100%;
+    height: auto;
 }
 
 .content {
@@ -65,8 +117,14 @@ header {
 }
 
 .carousel-header {
-    margin-left: 10rem;
+    margin-left: clamp(20px, 10vw, 160px);
     line-height: 2rem;
+}
+
+@media (max-width: 768px) {
+    .carousel-header {
+        margin: 0 clamp(20px, 7vw, 50px);
+    }
 }
 
 .carousel-row-title {
@@ -74,6 +132,11 @@ header {
     align-items: center;
     gap: .5rem;
     color: black;
+    position: relative;
+}
+
+.carousel-title {
+    font-size: 1.125rem;
 }
 
 .carousel-see-more {
@@ -84,6 +147,17 @@ header {
 
 .carousel-row-title:hover a {
     opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .carousel-see-more {
+        opacity: 1;
+    }
+}
+
+.carousel-row-description {
+    text-align: justify;
+    line-height: 1.125rem;
 }
 
 .carousel-container {
@@ -106,8 +180,8 @@ header {
     cursor: pointer;
     border: none;
     background: linear-gradient(to left, transparent 0%, black 200%);
-    opacity: 0.1;
-    transition: all 600ms ease-in-out;
+    opacity: 0;
+    transition: all 700ms ease-in-out;
 }
 
 .next-button {
@@ -116,8 +190,8 @@ header {
     background: linear-gradient(to right, transparent 0%, black 200%);
 }
 
-.prev-button:hover,
-.next-button:hover {
+.carousel-container:hover 
+button {
     opacity: 1;
 }
 
@@ -128,7 +202,7 @@ header {
 }
 
 .slider-wrapper {
-    margin-left: 10rem;
+    margin-left: clamp(20px, 10vw, 160px);
     margin-right: auto;
     position: relative;
     z-index: 1;
@@ -137,6 +211,12 @@ header {
     /* Hide scrollbar for IE, Edge and Firefox */
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+}
+
+@media (max-width: 768px) {
+    .slider-wrapper {
+        margin-left: clamp(20px, 7vw, 50px);
+    }
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -164,6 +244,16 @@ header {
     flex-direction: column;
     background-color: #EFF0F0;
     box-shadow:  0 1.6px 3.2px #0003;
+}
+
+@media (max-width: 576px) {
+    .slider-item {
+        width: 20rem;
+    }
+}
+
+.slider-item:hover {
+    transform: scale(1.05);
 }
 
 .item-image {
