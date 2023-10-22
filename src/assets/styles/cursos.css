@@ -1,0 +1,60 @@
+.section_cards{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 5px 10px 5px;
+    margin-inline-start: 158px;
+    align-items: center;
+}
+
+.section_cards .card{
+    padding: 10px;
+    width: 300px;
+    margin: 20px;
+    border: 2px solid #2D266C;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.section_cards .card .descricao_curso{
+ padding: 20px;
+ text-align: center;
+}
+
+.section_cards .card .descricao_curso p{
+    font-family: ROBOTO;
+    font-size: 1em;
+}
+
+.section_cards .card .descricao_curso p{
+    color: #666;
+}
+
+.section_cards .card .descricao_curso a{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2D266C;
+    color: #fff;
+    border-radius: 40px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.section_cards .card:hover{
+    background-color:#dbd6d6da;
+    color: black;
+    border-color: black;
+    box-shadow: 2px 20px 25px #375ee3;
+}
+
+.section_cards .card:hover .descricao_curso p{
+    color: black;
+}
+
+h1, span, h2{
+    margin-inline-start: 158px;
+}
+
+.section_cards p{
+    text-align: center;
+}
