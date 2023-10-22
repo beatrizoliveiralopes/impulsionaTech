@@ -8,10 +8,18 @@ header {
 /*conteudo*/
 
 .banner{
-  
     padding: 0 50px;
     margin: 0 90px;
 }
+
+@media(max-width: 768px) {
+    .banner{
+        max-width: 620px;
+        margin: 0 auto;
+        padding: 100px 0 0 0;
+    }
+}
+
 .banner span{
     color:#FFF;
     font-size: 30px;
@@ -30,8 +38,8 @@ header {
     font-size: 20px;
     text-align: justify;
     margin: 0 50px;  
-    padding: 1rem 0 2rem 0;
-    
+    padding: 1rem 0 2rem 0; 
+    min-width: 250px; 
 }
 .about-img{ 
     max-width: 500px;
@@ -52,10 +60,6 @@ header {
         margin: 0 auto;
     }
 }
-@media(max-width:768px){
-
-}
-
 
 /*cards*/
 .conteneir{
@@ -80,12 +84,11 @@ header {
     margin: 1.25rem;
     padding: 20px;
     max-width: 30%;
+    min-width: 270px;
     box-sizing: border-box;
     border-radius: 12px;
     background-color: #FFF;
     cursor: pointer;
-    
-    
 }
 .img-card{
     width: 200px;
