@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-Br">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,74 +12,144 @@
   <link rel="stylesheet" href="../assets/styles/sobre.css">
 
   <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/ade55217c4.js" crossorigin="anonymous"></script>
 
   <title>Impulsiona Tech</title>
 </head>
 
 <body>
 
-  <head>
-    <a href="../index.html"><img src="../assets/imgs/logo-impulsiona-tech.jpg" alt="Logo Impulsiona Tech" width="160"></a>
-    <nav>
+  <header>
+    <a class="home" href="index.html"><img src="../assets/imgs/logo-impulsiona-tech.png" alt="Logo Impulsiona Tech" width="160"></a>
+    <div role="button" class="button-menu" onclick="mostarMenuFluante()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <nav class="menu">
       <a href="sobre.html">SOBRE</a>
-      <a href="cursos.html" >CURSOS</a>
-      <a href="vagas.html" >VAGAS</a>
-      <a href="contato.html" >CONTATO</a>
-      <img src="../assets/icons/magnifying-glass-solid.svg" alt="Pesquisar" height="15">
+      <a href="./cursos.html">CURSOS</a>
+      <a href="./vagas.html">VAGAS</a>
+      <a href="./contato.html">CONTATO</a>
+      <img src="../assets/icons/search.svg" alt="Pesquisar">
     </nav>
-  </head>
-  <main>
-    <section>
-      <h1>Sobre</h1>
-      <p>É uma plataforma online, que  indica cursos e oportunidade de emprego, relacionados ao mundo da tecnologia.
-        Nosso compromisso é guiar você no universo da tecnologia, conectá-lo com diversas oportunidades e inspirá-lo a inovar.
-        Junte-se a nós enquanto exploramos juntos o vasto mundo tecnológico.
-      </p>
-      <img src="../assets/imgs/a-importancia-da-tecnologia-da-informacao-nas-empresas.jpeg"width="460px" alt="Imagem impotancia TI">
+  </header>
+
+ <main>
+    <section class="banner">
+       <span>SOBRE</span>
+       <div class="banner-content">
+       <p class="text-descripton"> A <strong><em>Impulsiona TECH.</em></strong> é uma plataforma online, que  indica cursos e oportunidades de emprego, relacionados ao mundo da tecnologia.
+        Nosso compromisso é guiar você no universo da tecnologia, conectá-lo com diversas oportunidades e inspirá-lo a inovar.<br/> Junte-se a nós enquanto exploramos o vasto mundo tecnológico.
+       </p> 
+       <img class="about-img" src="../assets/imgs/a-importancia-da-tecnologia-da-informacao-nas-empresas.jpeg" alt="Imagem impotancia TI">    
+       </div>
     </section>
-    <section>
-      <h3>Conheça nosso Time que irá com você nessa jornada</h3>
-      <span>Veja a trajetória de cada um na equipe.</span><br/>
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="../assets/imgs/beatriz.jpg " alt="Imagem de capa da beatriz">
-        <div class="card-body">
-          <p class="card-text"><strong>Beatriz:</strong> É Analista de Sistemas pelo IFTM - Campus Paracatu. Atualmente é servidora público federal atuando na área de Infraestrutura de Redes e Servidores..</p>
-        <img class="card-img-top" src="../assets/imgs/deyvison.jpg" alt="Imagem de capa do deyvison">
-        <div class="card-body">
-          <p class="card-text"><strong>Deyvison:</strong>Formado em Análise e Desenvolvimento de Sistemas pela Universidade da Amazônia, desde 2015.Possui experiência em desenvolvimento Front-End. Trabalhou em instituições públicas e privadas</p>
-        <img class="card-img-top" src="../assets/imgs/leandro.jpg" alt="Imagem de capa do leandro">
-        <div class="card-body">
-          <p class="card-text"><strong>Leandro:</strong> Cursando Análise e Desenvolvimento de Sistemas na Uniasselvi. Em processo de transição de carreira, saindo do comércio para ingressar no mundo da tecnologia.</p>
-        <img class="card-img-top" src="../assets/imgs/luanG.jpg" alt="Imagem de capa do luanG">
-        <div class="card-body">
-          <p class="card-text"><strong>LuanG:</strong> Graduado em Bacharelado em Tecnologia da Informação e Bacharelado em Engenharia de Computação, ambas pela Universidade Federal Rural do Semi-Árido/UFERSA.<br/>
-            Tenho experiência em desenvolvimento back-end (API REST) com Node.js, graças a um projeto de iniciação científica e um estágio.</p>
-        <img class="card-img-top" src="../assets/imgs/sabrina.jpg" alt="Imagem de capa da sabrina">
-        <div class="card-body">
-          <p class="card-text"><strong>Sabrina:</strong> Estou em transiçõo de carreira minha atuação no mercado de trabalho era Inspetora de Controle de Qualidade,agora estou cursando Análise e Desenvolvimento de Dados.</p>
-        </div>
+      
+
+<div class="conteneir">
+     <div class="card">
+       <h1>Our Team</h1>
+     </div>
+    <!--cards-->
+  <div class="sub-card">
+     <div class="teams">
+       <img class="img-card" src="../assets/imgs/beatriz.jpg" alt="Imagem da BEATRIZ">
+       <h2 class="name">Beatriz</h2>
+       <div class="about">
+           <p>É Analista de Sistemas pelo IFTM - Campus Paracatu.<br/> 
+               Atualmente é servidora público federal atuando na área de Infraestrutura de Redes e Servidores.
+           </p>
+       </div>
+       <div class="social-links">
+            <a href="https://br.linkedin.com/in/beatriz-oliveira-lopes-0930b562" target="_blank"><i class="fa fa-linkedin-square" style="font-size:36px;color:#1c5ece"></i></a>
+            <a href="https://github.com/beatrizoliveiralopes"><i class="fa fa-github" style="font-size:36px"></i></a>
+       </div>
+     </div>
+
+     <div class="teams">
+      <img class="img-card" src="../assets/imgs/deyvison.jpg" alt="Imagem do Deyvison">
+      <h2 class="name">Deyvison</h2>
+      <div class="about">
+          <p>Formado em Análise e Desenvolvimento de Sistemas pela Universidade da Amazônia, desde 2015.<br/>
+             Possui experiência em desenvolvimento Front-End.
+             Trabalhou em instituições públicas e privadas 
+          </p>
       </div>
-    </section>
-    
-  </main>
+      <div class="social-links">
+           <a href="https://www.linkedin.com/in/deyvison-viana-paes-71236a5a" target="_blank"><i class="fa fa-linkedin-square" style="font-size:36px;color:#1c5ece"></i></a>
+           <a href="https://github.com/DeyvisonViana" target="_blank"><i class="fa fa-github" style="font-size:36px"></i></a>
+      </div>   
+     </div>
+   
+     <div class="teams">
+      <img class="img-card" src="../assets/imgs/leandro.jpg" alt="Imagem do LEANDRO">
+      <h2 class="name">Leandro</h2>
+      <div class="about">
+        <p>Cursando Análise e Desenvolvimento de Sistemas na Uniasselvi.<br/>
+          Em processo de transição de carreira, saindo do comércio para ingressar no mundo da tecnologia.
+        </p>
+      </div>
+      <div class="social-links">
+          <a href="https://www.linkedin.com/in/leandro-guimar%C3%A3es-aa7115249?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa fa-linkedin-square" style="font-size:36px;color:#1c5ece"></i></a>
+          <a href="https://github.com/LeandroGuimaraes23" target="_blank"><i class="fa fa-github" style="font-size:36px"></i></a>
+      </div>
+     </div>
+
+     <div class="teams">
+      <img class="img-card" src="../assets/imgs/LUAN.jpg" alt="Imagem do LUAN">
+      <h2 class="name">LuanG</h2>
+      <div class="about">
+         <p>Graduado em Bacharelado em TI e em Engenharia de Computação, ambas pela Universidade Federal Rural do Semi-Árido/UFERSA.<br/>
+            Tenho experiência em  back-end (API REST) com Node.js, graças a um projeto de iniciação científica e um estágio.
+         </p>
+      </div>
+      <div class="social-links">
+          <a href="https://www.linkedin.com/in/luan-guilherme-dantas-3a57a3130/?originalSubdomain=br" target="_blank"><i class="fa fa-linkedin-square" style="font-size:36px;color:#1c5ece"></i></a>
+         <a href="https://github.com/LuanGDantas" target="_blank"><i class="fa fa-github" style="font-size:36px"></i></a>
+      </div>
+     </div>
+
+     <div class="teams">
+       <img class="img-card" src="../assets/imgs/sabrina.jpg" alt="Imagem da SABRINA">
+       <h2 class="name">Sabrina</h2>
+       <div class="about">
+          <p>Estou em transiçõo de carreira minha atuação no mercado de trabalho era Inspetora de Controle de Qualidade.<br/>
+             Atualmente cursando Análise e Desenvolvimento de Dados.
+          </p>
+       </div>
+       <div class="social-links">
+       <a href="https://www.linkedin.com/in/sabrina-dias-inspetoradequalidade/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:36px;color:#1c5ece"></i></a>
+       <a href="https://github.com/sabrinaflorenco" target="_blank"><i class="fa fa-github" style="font-size:36px"></i></a>
+       </div>
+     </div> 
+  </div>
+</div>
+
+
+</main>
+   
   <footer>
-    <section>
-      <img src="../assets/imgs/logo-impulsiona-tech.jpg" alt="Logo Impulsiona Tech" width="160">
-      <a href="" target="_blank"><img src="../assets/icons/linkedin.svg" alt="Link para Linkedin" height="25"></a>
-      <a href="" target="_blank"><img src="../assets/icons/instagram.svg" alt="Link para Instagram" height="25"></a>
-      <a href="" target="_blank"><img src="../assets/icons/facebook.svg" alt="Link para Facebook" height="25"></a>
-      <a href="" target="_blank"><img src="../assets/icons/x-twitter.svg" alt="Link para X-Twitter" height="25"></a>
-      <nav>
-        <a href="sobre.html">SOBRE</a>
-        <a href="cursos.html">CURSOS</a>
-        <a href="vagas.html">VAGAS</a>
-        <a href="contato.html">CONTATO</a>
-      </nav>
-    </section>
-    <section>
-      <span>Apoio:</span>
-      <img src="../assets/imgs/proz-aws-talentocloud.png" alt="Proz + AWS + Talento Cloud" width="360">
-    </section>
+    <div class="principal">
+      <section class="logo">
+        <img src="../assets/imgs/logo-impulsiona-tech.png" alt="Logo Impulsiona Tech" width="160">
+        <div class="sociais">
+          <a href="" target="_blank"><img src="../assets/imgs/linkedin.png" alt="Link para Linkedin" height="25"></a>
+          <a href="" target="_blank"><img src="../assets/imgs/instagram.png" alt="Link para Instagram" height="25"></a>
+          <a href="" target="_blank"><img src="../assets/imgs/facebook.png" alt="Link para Facebook" height="25"></a>
+          <a href="" target="_blank"><img src="../assets/imgs/twitter-x.png" alt="Link para X-Twitter" height="30"></a>
+        </div>
+        <nav>
+          <a href="./sobre.html">SOBRE</a>
+          <a href="./cursos.html">CURSOS</a>
+          <a href="./vagas.html">VAGAS</a>
+          <a href="./contato.html">CONTATO</a>
+        </nav>
+      </section>
+      <section class="parceiros">
+        <span>Apoio:</span>
+        <img src="../assets/imgs/proz-aws-talentcloud.jpg" alt="Proz + AWS + Talento Cloud" width="360">
+      </section>
+    </div>
     <span>© Copyright 2023 - Impulsiona Tech. - Todos os direitos reservados.</span>
   </footer>
 </body>

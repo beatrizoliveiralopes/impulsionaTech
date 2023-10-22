@@ -1,0 +1,137 @@
+body{
+    background: linear-gradient(145deg, #2D266C 0%, #375ee3 80%);
+}
+
+header {
+    background: transparent;
+}
+/*conteudo*/
+
+.banner{
+  
+    padding: 0 50px;
+    margin: 0 90px;
+}
+.banner span{
+    color:#FFF;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 3.12rem ;
+    padding-top: 3rem .2rem 0 0;
+    
+}
+.banner-content{
+    display: flex;
+}
+.text-descripton{
+    color:white;
+    font-size: 16px;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: justify;
+    margin: 0 50px;  
+    padding: 1rem 0 2rem 0;
+    
+}
+.about-img{ 
+    max-width: 500px;
+    width: 100%;
+    margin: 10px;
+    padding:10px 20px 40px 0;
+}
+
+@media(max-width: 1024px){
+     .banner-content {
+       flex-wrap: wrap;
+
+    }
+    .about-img{
+        display: flex;
+        justify-content: center;
+        max-width:75%;
+        margin: 0 auto;
+    }
+}
+@media(max-width:768px){
+
+}
+
+
+/*cards*/
+.conteneir{
+    background: #d3d3d3; 
+}
+.card{
+    text-align: center;
+    color: #2D266C;
+    padding-top: 1.80rem;
+}
+.sub-card{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+     
+}
+.teams{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.25rem;
+    padding: 20px;
+    max-width: 30%;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background-color: #FFF;
+    cursor: pointer;
+    
+    
+}
+.img-card{
+    width: 200px;
+    height: 200px;
+    padding: .35rem .1rem;
+    border-radius:50%; 
+}
+.teams:hover{
+    background: #5979e3;
+    color:#FFF
+}
+.name{
+    padding: 12px;
+    font-size: bold;
+    font-size: 24px;
+    color: #2D266C;
+    text-align:center;
+}
+.about{
+    margin: 10px 0;
+    font-weight: 400;
+    text-align:justify;
+}
+.social-links{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+    
+}
+.social-links a:hover{
+    transform:scale(1.5) ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
