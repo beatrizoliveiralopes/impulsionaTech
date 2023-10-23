@@ -11,163 +11,294 @@
 
   <link rel="stylesheet" href="./assets/styles/global.css">
   <link rel="stylesheet" href="./assets/styles/index.css">
+  <script src="https://kit.fontawesome.com/ade55217c4.js" crossorigin="anonymous"></script>
 
   <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+  <script src="https://kit.fontawesome.com/ade55217c4.js" crossorigin="anonymous"></script>
 
   <title>Impulsiona Tech</title>
 </head>
 
 <body>
 
-  <head>
-    <a href="index.html"><img src="assets/imgs/logo-impulsiona-tech.jpg" alt="Logo Impulsiona Tech" width="160"></a>
-    <nav>
+  <header>
+    <a class="home" href="index.html"><img src="assets/imgs/logo-impulsiona-tech.png" alt="Logo Impulsiona Tech" width="160"></a>
+    <div role="button" class="button-menu" onclick="mostarMenuFluante()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <nav class="menu">
       <a href="pages/sobre.html">SOBRE</a>
       <a href="pages/cursos.html">CURSOS</a>
       <a href="pages/vagas.html">VAGAS</a>
       <a href="pages/contato.html">CONTATO</a>
-      <img src="assets/icons/magnifying-glass-solid.svg" alt="Pesquisar" height="15">
+      <img src="assets/icons/search.svg" alt="Pesquisar">
     </nav>
-  </head>
+  </header>
   <main>
-    <section>
-      <img src="assets/imgs/banner-principal.png" alt="Banner Principal" width="1024">
-    </section>
-    <section>
-      <h3>ÁREAS DE TECNOLOGIA</h3>
-      <span>Conheça as diversas áreas de tecnologia que você pode seguir.</span>
-      <a href="pages/areas.html">Ver todas</a>
-      <div class="carousel-container">
-        <button class="prev-button" aria-label="Anterior"><img src="assets/icons/circle-left-regular.svg" alt="Seta esquerda" height="20"></button>
-        <div class="carousel-slide">
-          <div class="slide-item">
-            <a href=""><img src="assets/imgs/front-end.jpg" alt="Front-end" height="200"></a>
-            <span>Front-end</span>
+    <section id="banner-section">
+      <div id="banner">
+        <div class="banner-wrapper">
+          <div class="banner-information">
+            <h1 class="banner-title">Conectando você ao futuro digital</h1>
+            <p class="banner-text">Nosso compromisso é guiar você no universo da tecnologia, conectar com oportunidades e inspirar a inovação. Junte-se a nós enquanto exploramos juntos o vasto mundo tecnologico.</p>
           </div>
-          <div class="slide-item">
-            <a href=""><img src="assets/imgs/back-end.jpg" alt="Back-end" height="200"></a>
-            <span>Back-end</span>
-          </div>
-          <div class="slide-item">
-            <a href=""><img src="assets/imgs/devops.jpg" alt="DevOps" height="200"></a>
-            <span>DevOps</span>
-          </div>
-          <div class="slide-item">
-            <a href=""><img src="assets/imgs/analise-de-dados.jpg" alt="Analise de dados" height="200"></a>
-            <span>Análise de Dados</span>
-          </div>
-          <div class="slide-item">
-            <a href=""><img src="assets/imgs/seguranca-informacao.jpg" alt="Segurança da informacao" height="200"></a>
-            <span>Segurança da Informação</span>
-          </div>
-          <div class="slide-item">
-            <a href=""><img src="assets/imgs/desing-ui-ux.jpg" alt="UX e UI design" height="200"></a>
-            <span>UX e UI Design</span>
+          <div class="banner-image">
+            <img src="assets/imgs/image-banner.png" alt="Banner principal">
           </div>
         </div>
-        <button class="next-button" aria-label="Próximo"><img src="assets/icons/circle-right-regular.svg" alt="Seta direita" height="20"></button>
       </div>
     </section>
-    <section>
-      <h3>CURSOS DE TECNOLOGIA</h3>
-      <span>Alguns cursos de tecnologia disponivel gratuitamente. Excelentes para iniciar sua carreira.</span>
-      <a href="pages/cursos.html">Ver todas</a>
+    <section class="content">
+      <div class="carousel-header">
+        <h2 class="carousel-row-title">
+          <span class="carousel-title">ÁREAS DE TECNOLOGIA</span>
+          <a class="carousel-see-more" href="pages/areas.html">Ver mais</a>
+        </h2>
+        <p class="carousel-row-description">Conheça as diversas áreas de tecnologia que você pode seguir.</p>
+      </div>
       <div class="carousel-container">
-        <button class="prev-button" aria-label="Anterior"><img src="assets/icons/circle-left-regular.svg" alt="Seta esquerda" height="20"></button>
-        <div class="carousel-slide">
-          <div class="slide-item">
-            <a href=""><img src="assets/imgs/javascript.jpeg" alt="Javascript"></a>
-            <span>Introdução ao Javascript</span>
-          </div>
-          <div class="slide-item">
-            <a href=""><img src="assets/imgs/html.jpeg" alt="HTML"></a>
-            <span>HTML Avançado</span>
-          </div>
-          <div class="slide-item">
-            <a href=""><img src="assets/imgs/css.jpeg" alt="CSS"></a>
-            <span>Inovando com CSS</span>
-          </div>
-          <div class="slide-item">
-            <a href=""><img src="assets/imgs/python.jpeg" alt="Python"></a>
-            <span>Desenvolvimento com Python</span>
-          </div>
-          <div class="slide-item">
-            <a href=""><img src="assets/imgs/ciencia-de-dados.jpg" alt="Ciencia de Dados"></a>
-            <span>Ciência de Dados: Primeiros Passos</span>
-          </div>
-          <div class="slide-item">
-            <a href=""><img src="assets/imgs/cyber-security.jpeg" alt="Cyber Security"></a>
-            <span>Segurança cibernética – Primeiros passos</span>
-          </div>
-          <div class="slide-item">
-            <a href=""><img src="assets/imgs/pentest.jpg" alt="Pentest"></a>
-            <span>Introdução ao Pentest na Prática</span>
-          </div>
-          <div class="slide-item">
-            <a href=""><img src="assets/imgs/business-intelligence.jpg" alt="Business Intelligence"></a>
-            <span>Business Intelligence</span>
+        <button class="prev-button" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="next-button" aria-label="Próximo"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="slider-wrapper">
+          <div class="slider">
+            <div role="button" class="slider-item">
+                <div class="item-image" style="background-image: url(assets/imgs/front-end.jpg);"></div>
+                <div class="item-information">
+                  <h3 title="Front-end">Front-end</h3>
+                  <span>Desenvolvimento de software</span>
+              </div>
+            </div>
+            <div role="button" class="slider-item">
+              <div class="item-image" style="background-image: url(assets/imgs/back-end.jpg);"></div>
+              <div class="item-information">
+                <h3 title="Back-end">Back-end</h3>
+                <span>Desenvolvimento de software</span>
+              </div>
+            </div>
+            <div role="button" class="slider-item">
+              <div class="item-image" style="background-image: url(assets/imgs/devops.jpg);"></div>
+              <div class="item-information">
+                <h3 title="DevOps">DevOps</h3>
+                <span>Infrestrurtara e Cloud Computing</span>
+              </div>
+            </div>
+            <div role="button" class="slider-item">
+              <div class="item-image" style="background-image: url(assets/imgs/analise-de-dados.jpg);"></div>
+              <div class="item-information">
+                <h3 title="Análise de Dados">Análise de Dados</h3>
+                <span>Ciência de dados</span>
+              </div>
+            </div>
+            <div role="button" class="slider-item">
+              <div class="item-image" style="background-image: url(assets/imgs/seguranca-informacao.jpg);"></div>
+              <div class="item-information">
+                <h3 title="Segurança da Informação">Segurança da Informação</h3>
+                <span></span>
+              </div>
+            </div>
+            <div role="button" class="slider-item">
+                <div class="item-image" style="background-image: url(assets/imgs/back-end.jpg);"></div>
+                <div class="item-information">
+                  <h3 title="Back-end">Back-end</h3>
+                  <span>Desenvolvimento de software</span>
+                </div>
+            </div>
+            <div role="button" class="slider-item">
+                <div class="item-image" style="background-image: url(assets/imgs/devops.jpg);"></div>
+                <div  class="item-information">
+                  <h3 title=""DevOps>DevOps</h3>
+                  <span>Infrestrurtara e Cloud Computing</span>
+                </div>
+            </div>
           </div>
         </div>
-        <button class="next-button" aria-label="Próximo"><img src="assets/icons/circle-right-regular.svg" alt="Seta direita" height="20"></button>
       </div>
     </section>
-    <section>
-      <h3>OPORTUNIDADES DE EMPREGO</h3>
-      <span>Algumas vagas de emprego na área de tecnologia.</span>
-      <a href="pages/vagas.html">Ver todos</a>
+    <section class="content">
+      <div class="carousel-header">
+        <h2 class="carousel-row-title">
+          <span class="carousel-title">CURSOS DE TECNOLOGIA</span>
+          <a class="carousel-see-more" href="pages/cursos.html">Ver mais</a>
+        </h2>
+        <p class="carousel-row-description">Alguns cursos de tecnologia disponivel gratuitamente. Excelentes para iniciar sua carreira.</p>
+      </div>
       <div class="carousel-container">
-        <button class="prev-button" aria-label="Anterior"><img src="assets/icons/circle-left-regular.svg" alt="Seta esquerda" height="20"></button>
-        <div class="carousel-slide">
-          <div class="slide-item">
-            <a href=""><img src="assets/imgs/insta-carros.png" alt="Desenvolvedor FrontEnd Jr" height="200"></a>
-            <span>Desenvolvedor FrontEnd Jr</span>
-            <span>Agudos/SP - Assistente, Tempo Integral - Presencial</span>
-          </div>
-          <div class="slide-item">
-            <a href=""><img src="assets/imgs/mercado-pago.png" alt="Engenheiro de Software - Mercado Pago" height="200"></a>
-            <span>Engenheiro Sênior de Software - Pessoas com Deficiência - Mercado Pago</span>
-            <span>São Paulo/SP - Efetivo - Híbrido</span>
-          </div>
-          <div class="slide-item">
-            <a href=""><img src="assets/imgs/contato-seguro.png" alt="Desenvolvedor Júnior Front End" height="200"></a>
-            <span>Desenvolvedor Júnior - Front End - Contato Seguro</span>
-            <span>Efetivo - Remoto</span>
-          </div>
-          <div class="slide-item">
-            <a href=""><img src="assets/imgs/korp.png" alt="Desenvolvedor (a) Web Fullstack Golang e Angular" height="200"></a>
-            <span>Desenvolvedor (a) Web Fullstack Golang e Angular - Júnior</span>
-            <span>Curitiba/PR - Efetivo - Remoto</span>
-          </div>
-          <div class="slide-item">
-            <a href=""><img src="assets/imgs/mjv-technology-innovation.png" alt="UX/UI Designer Junior" height="200"></a>
-            <span>UX/UI Designer Junior</span>
-            <span>São Paulo/SP - Efetivo - Híbrido</span>
+        <button class="prev-button" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="next-button" aria-label="Próximo"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="slider-wrapper">
+          <div class="slider">
+            <div role="button" class="slider-item">
+                <div class="item-image" style="background-image: url(assets/imgs/javascript.jpeg);"></div>
+                <div  class="item-information">
+                  <h3 title="Introdução ao Javascript">Introdução ao Javascript</h3>
+                  <span>10h -  30 conteúdos</span>
+                </div>
+            </div>
+            <div role="button" class="slider-item">
+                <div class="item-image" style="background-image: url(assets/imgs/html5.png);"></div>
+                <div  class="item-information">
+                  <h3 title="HTML Avançado">HTML Avançado</h3>
+                  <span>10h -  30 conteúdos</span>
+                </div>
+            </div>
+            <div role="button" class="slider-item">
+                <div class="item-image" style="background-image: url(assets/imgs/css.png);"></div>
+                <div  class="item-information">
+                  <h3 title="Inovando com CSS">Inovando com CSS</h3>
+                  <span>10h -  30 conteúdos</span>
+                </div>
+            </div>
+            <div role="button" class="slider-item">
+                <div class="item-image" style="background-image: url(assets/imgs/python.jpeg);"></div>
+                <div  class="item-information">
+                  <h3 title="Desenvolvimento com Python">Desenvolvimento com Python</h3>
+                  <span>10h -  30 conteúdos</span>
+                </div>
+            </div>
+            <div role="button" class="slider-item">
+                <div class="item-image" style="background-image: url(assets/imgs/ciencia-de-dados.jpg);"></div>
+                <div  class="item-information">
+                  <h3 title="Ciência de Dados: Primeiros Passos">Ciência de Dados: Primeiros Passos</h3>
+                  <span>10h -  30 conteúdos</span>
+                </div>
+            </div>
+            <div role="button" class="slider-item">
+                <div class="item-image" style="background-image: url(assets/imgs/seguranca-informacao.jpg);"></div>
+                <div  class="item-information">
+                  <h3 title="Segurança cibernética – Primeiros passos">Segurança cibernética – Primeiros passos</h3>
+                  <span>10h -  30 conteúdos</span>
+                </div>
+            </div>
+            <div role="button" class="slider-item">
+                <div class="item-image" style="background-image: url(assets/imgs/pentest.jpg);"></div>
+                <div  class="item-information">
+                  <h3 title="Introdução ao Pentest na Prática">Introdução ao Pentest na Prática</h3>
+                  <span>10h -  30 conteúdos</span>
+                </div>
+            </div>
+            <div role="button" class="slider-item">
+                <div class="item-image" style="background-image: url(assets/imgs/business-intelligence.jpg);"></div>
+                <div  class="item-information">
+                  <h3 title="Business Intelligence">Business Intelligence</h3>
+                  <span>10h -  30 conteúdos</span>
+                </div>
+            </div>
           </div>
         </div>
-        <button class="next-button" aria-label="Próximo"><img src="assets/icons/circle-right-regular.svg" alt="Seta direita" height="20"></button>
+      </div>
+    </section>
+    <section class="content">
+      <div class="carousel-header">
+        <h2 class="carousel-row-title">
+          <span class="carousel-title">VAGAS DE EMPREGO</span>
+          <a class="carousel-see-more" href="pages/vagas.html">Ver mais</a>
+        </h2>
+        <p class="carousel-row-description">Algumas vagas de emprego na área de tecnologia.</p>
+      </div>
+      <div class="carousel-container">
+        <button class="prev-button" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="next-button" aria-label="Próximo"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="slider-wrapper">
+          <div class="slider">
+            <div role="button" class="slider-item">
+                <div class="item-image" style="background-image: url(assets/imgs/insta-carros.png);"></div>
+                <div class="item-information">
+                  <h3 title="Desenvolvedor FrontEnd Jr">Desenvolvedor FrontEnd Jr</h3>
+                  <span>Agudos/SP - Assistente, Tempo Integral - Presencial</span>
+              </div>
+            </div>
+            <div role="button" class="slider-item">
+                <div class="item-image" style="background-image: url(assets/imgs/mercado-pago.png);"></div>
+                <div class="item-information">
+                  <h3 title="Engenheiro Sênior de Software - Pessoas com Deficiência - Mercado Pago">Engenheiro Sênior de Software - Pessoas com Deficiência - Mercado Pago</h3>
+                  <span>São Paulo/SP - Efetivo - Híbrido</span>
+              </div>
+            </div>
+            <div role="button" class="slider-item">
+                <div class="item-image" style="background-image: url(assets/imgs/contato-seguro.png);"></div>
+                <div class="item-information">
+                  <h3 title="Desenvolvedor Júnior - Front End - Contato Seguro">Desenvolvedor Júnior - Front End - Contato Seguro</h3>
+                  <span>Efetivo - Remoto</span>
+              </div>
+            </div>
+            <div role="button" class="slider-item">
+                <div class="item-image" style="background-image: url(assets/imgs/korp.png);"></div>
+                <div class="item-information">
+                  <h3 title="Desenvolvedor (a) Web Fullstack Golang e Angular - Júnior">Desenvolvedor (a) Web Fullstack Golang e Angular - Júnior</h3>
+                  <span>Curitiba/PR - Efetivo - Remoto</span>
+              </div>
+            </div>
+            <div role="button" class="slider-item">
+                <div class="item-image" style="background-image: url(assets/imgs/mjv-technology-innovation.png);"></div>
+                <div class="item-information">
+                  <h3 title="UX/UI Designer Junior">UX/UI Designer Junior</h3>
+                  <span>São Paulo/SP - Efetivo - Híbrido</span>
+              </div>
+              <div role="button" class="slider-item">
+                  <div class="item-image" style="background-image: url(assets/imgs/mercado-pago.png);"></div>
+                  <div class="item-information">
+                    <h3 title="Engenheiro Sênior de Software - Pessoas com Deficiência - Mercado Pago">Engenheiro Sênior de Software - Pessoas com Deficiência - Mercado Pago</h3>
+                    <span>São Paulo/SP - Efetivo - Híbrido</span>
+                  </div>
+              </div>
+              <div role="button" class="slider-item">
+                  <div class="item-image" style="background-image: url(assets/imgs/contato-seguro.png);"></div>
+                  <div class="item-information">
+                    <h3 title="Desenvolvedor Júnior - Front End - Contato Seguro">Desenvolvedor Júnior - Front End - Contato Seguro</h3>
+                    <span>Efetivo - Remoto</span>
+                  </div>
+              </div>
+              <div role="button" class="slider-item">
+                  <div class="item-image" style="background-image: url(assets/imgs/insta-carros.png);"></div>
+                  <div class="item-information">
+                    <h3 title="Desenvolvedor FrontEnd Jr">Desenvolvedor FrontEnd Jr</h3>
+                    <span>Agudos/SP - Assistente, Tempo Integral - Presencial</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
   <footer>
-    <section>
-      <img src="assets/imgs/logo-impulsiona-tech.jpg" alt="Logo Impulsiona Tech" width="160">
-      <a href="" target="_blank"><img src="assets/icons/linkedin.svg" alt="Link para Linkedin" height="25"></a>
-      <a href="" target="_blank"><img src="assets/icons/instagram.svg" alt="Link para Instagram" height="25"></a>
-      <a href="" target="_blank"><img src="assets/icons/facebook.svg" alt="Link para Facebook" height="25"></a>
-      <a href="" target="_blank"><img src="assets/icons/x-twitter.svg" alt="Link para X-Twitter" height="25"></a>
-      <nav>
-        <a href="pages/sobre.html">SOBRE</a>
-        <a href="pages/cursos.html">CURSOS</a>
-        <a href="pages/vagas.html">VAGAS</a>
-        <a href="pages/contato.html">CONTATO</a>
-      </nav>
-    </section>
-    <section>
-      <span>Apoio:</span>
-      <img src="assets/imgs/proz-aws-talentocloud.png" alt="Proz + AWS + Talento Cloud" width="360">
-    </section>
+    <div class="principal">
+      <section class="logo">
+        <img src="assets/imgs/logo-impulsiona-tech.png" alt="Logo Impulsiona Tech" width="160">
+        <div class="sociais">
+          <a href="" target="_blank"><img src="assets/imgs/linkedin.png" alt="Link para Linkedin" height="25"></a>
+          <a href="" target="_blank"><img src="assets/imgs/instagram.png" alt="Link para Instagram" height="25"></a>
+          <a href="" target="_blank"><img src="assets/imgs/facebook.png" alt="Link para Facebook" height="25"></a>
+          <a href="" target="_blank"><img src="assets/imgs/twitter-x.png" alt="Link para X-Twitter" height="30"></a>
+        </div>
+        <nav>
+          <a href="pages/sobre.html">SOBRE</a>
+          <a href="pages/cursos.html">CURSOS</a>
+          <a href="pages/vagas.html">VAGAS</a>
+          <a href="pages/contato.html">CONTATO</a>
+        </nav>
+      </section>
+      <section class="parceiros">
+        <span>Apoio:</span>
+        <img src="assets/imgs/proz-aws-talentcloud.jpg" alt="Proz + AWS + Talento Cloud" width="360">
+      </section>
+    </div>
     <span>© Copyright 2023 - Impulsiona Tech. - Todos os direitos reservados.</span>
   </footer>
+  <script>
+    function mostarMenuFluante() {
+      let header = document.querySelector('header');
+      let menu = document.querySelector('.menu');
+      let buttonMenu =  document.querySelector('.button-menu');
+      menu.classList.toggle('expanded-menu');
+      if(menu.classList.contains('expanded-menu')) {
+        header.style.background = 'linear-gradient(145deg, #2D266C 0%, #375ee3 80%)';
+        buttonMenu.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+      } else {
+        header.style.removeProperty('background');
+        buttonMenu.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      }
+    }
+  </script>
 </body>
-
 </html>

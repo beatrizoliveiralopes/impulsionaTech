@@ -1,145 +1,786 @@
 <!DOCTYPE html>
 <html lang="pt-Br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Link de icons da google-->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <!--Fim-->
 
-    <link rel="stylesheet" href="../assets/styles/global.css">
-    <link rel="stylesheet" href="../assets/styles/vagas.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico" />
+  <link rel="stylesheet" href="../assets/styles/global.css">
+  <link rel="stylesheet" href="../assets/styles/vagas.css">
 
-    <title>Impulsiona Tech</title>
-  </head>
-  <body>
-    <head>
-      <a href="../index.html"
-        ><img
-          src="../assets/imgs/logo-impulsiona-tech.jpg"
-          alt="Logo Impulsiona Tech"
-          width="160"
-      /></a>
-      <nav>
-        <a href="sobre.html">SOBRE</a>
-        <a href="cursos.html">CURSOS</a>
-        <a href="vagas.html">VAGAS</a>
-        <a href="contato.html">CONTATO</a>
-        <img
-          src="../assets/icons/magnifying-glass-solid.svg"
-          alt="Pesquisar"
-          height="15"
-        />
-      </nav>
-    </head>
-    <main>
-      <div class="#">
-        <div class="#">
-          <div class="#">
-            <a target="_blank" href="https://www.totvs.com/trabalhe-conosco/">
-              <img
-                src="https://uploads-ssl.webflow.com/624202259cde067ee0a0f048/63a27fd52c03638577eebb68_totvs.png"
-                alt="Totvs"
-              />
-            </a>
-            <div class="desc">
-              Totvs é uma empresa brasileira de software, com sede em São Paulo.
-            </div>
+  <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
+  <script src="https://kit.fontawesome.com/ade55217c4.js" crossorigin="anonymous"></script>
+
+  <title>Impulsiona Tech</title>
+</head>
+
+<body>
+
+  <header>
+    <a class="home" href="../index.html"><img src="../assets/imgs/logo-impulsiona-tech.png" alt="Logo Impulsiona Tech" width="160"></a>
+    <div role="button" class="button-menu" onclick="mostarMenuFluante()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <nav class="menu">
+      <a href="sobre.html">SOBRE</a>
+      <a href="cursos.html">CURSOS</a>
+      <a href="vagas.html">VAGAS</a>
+      <a href="contato.html">CONTATO</a>
+      <img src="../assets/icons/search.svg" alt="Pesquisar">
+    </nav>
+  </header>
+
+  <section>
+    <h2 class="h2-myBtnContainer">Vagas</h2>
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')"> Todos</button>
+      <button class="btn" onclick="filterSelection('frontend')"> Front-End</button>
+      <button class="btn" onclick="filterSelection('backend')"> Back-End</button>
+      <button class="btn" onclick="filterSelection('fullstack')"> Full Stack</button>
+      <button class="btn" onclick="filterSelection('dados')"> Dados</button>
+      <button class="btn" onclick="filterSelection('rede')"> Rede</button>
+      <button class="btn" onclick="filterSelection('ux-ui-designer')"> UX/UI-Designer</button>
+    </div>
+
+    <div class="filterDiv frontend">
+      <div class="container"></div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.vagas.com.br/vagas/v2565742/pessoa-desenvolvedora-front-end-pleno">
+            <img src="https://media.seudinheiro.com/uploads/2022/05/totvs-e1652279934109.jpg" alt="Logo Totvs">
+          </a>
+          <div class="desc">Front-End</div>
+          <div class="desc-table">
+            <table class="table">
+              <tr>
+                <td class="material-symbols-outlined">
+                  attach_money</td>
+                <td>A Combilar</td>
+              </tr>
+              <tr>
+                <td class="material-symbols-outlined">
+                  location_on</td>
+                <td>São Paulo</td>
+                </td>
+              <tr>
+                <td class="material-symbols-outlined">
+                  person</td>
+                <td>Pleno</td>
+                </td>
+              </tr>
+            </table>
           </div>
         </div>
-
-        <div class="#">
-          <div class="#">
-            <a target="_blank" href="https://stefanini.gupy.io/">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6whFVt5kgJgfPco77aBg2Kj8ddS_8nPDlAw&usqp=CAU"
-                alt="Stefanini "
-              />
-            </a>
-            <div class="desc">
-              A Stefanini ou Stefanini Consultoria e Assessoria em Informática
-              S/A
-            </div>
-          </div>
-        </div>
-
-        <div class="#">
-          <div class="#">
-            <a
-              target="_blank"
-              href="https://jobs.sap.com/?utm_source=CareerSite&utm_campaign=CorpSite_FT"
-            >
-              <img
-                src="https://www.sap.com/dam/application/shared/logos/sap_logo_rgb_onwhite_0300_0300.png.adapt.png/1656382976488.png"
-                alt="Sap"
-              />
-            </a>
-            <div class="desc">
-              Systemanalysis Programmentwicklung, que, em Português, significa
-              Desenvolvimento de Programas para Análise de Sistema.
-            </div>
-            <br />
-          </div>
-        </div>
-        <div class="clearfix"></div>
       </div>
-    </main>
-    <footer>
-      <section>
-        <img
-          src="../assets/imgs/logo-impulsiona-tech.jpg"
-          alt="Logo Impulsiona Tech"
-          width="160"
-        />
-        <a href="" target="_blank"
-          ><img
-            src="../assets/icons/linkedin.svg"
-            alt="Link para Linkedin"
-            height="25"
-        /></a>
-        <a href="" target="_blank"
-          ><img
-            src="../assets/icons/instagram.svg"
-            alt="Link para Instagram"
-            height="25"
-        /></a>
-        <a href="" target="_blank"
-          ><img
-            src="../assets/icons/facebook.svg"
-            alt="Link para Facebook"
-            height="25"
-        /></a>
-        <a href="" target="_blank"
-          ><img
-            src="../assets/icons/x-twitter.svg"
-            alt="Link para X-Twitter"
-            height="25"
-        /></a>
+    </div>
+
+    <div class="filterDiv backend">
+      <div class="container"></div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://globo.gupy.io/jobs/5552524">
+            <img src="https://media.licdn.com/dms/image/D4D0BAQEmNnyC8MqycQ/company-logo_100_100/0/1667854438854?e=1705536000&v=beta&t=zn9Ak2L8_IVoYzfasEWioAz1TzVpVdOTxaKncXm3hSI" alt="Cinque Terre">
+          </a>
+          <div class="desc">Back-End
+          </div>
+          <div class="desc-table">
+            <table class="table">
+              <tr>
+                <td class="material-symbols-outlined">
+                  attach_money</td>
+                <td>A Combilar</td>
+              </tr>
+              <tr>
+                <td class="material-symbols-outlined">
+                  location_on</td>
+                <td>Rio de Janeiro (Híbrido)</td>
+                </td>
+              <tr>
+                <td class="material-symbols-outlined">
+                  person</td>
+                <td>Pleno</td>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filterDiv fullstack">
+      <div class="container"></div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://johndeere.eightfold.ai/careers?query=Desenvolvedora%20ou%20Desenvolvedor%20Full%20Stack%20Java%20-%20Indaiatuba/SP">
+            <img src="https://apreflorestas.com.br/wp-content/uploads/2020/10/logo_johndeere.jpg" alt="Logo jonh Deere">
+          </a>
+          <div class="desc">FullStack</div>
+          <div class="desc-table">
+            <table class="table">
+              <tr>
+                <td class="material-symbols-outlined">
+                  attach_money</td>
+                <td>A Combilar</td>
+              </tr>
+              <tr>
+                <td class="material-symbols-outlined">
+                  location_on</td>
+                <td>Indaiatuba/SP</td>
+                </td>
+              <tr>
+                <td class="material-symbols-outlined">
+                  person</td>
+                <td>Pleno</td>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filterDiv dados">
+      <div class="container"></div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://nerdin.com.br/vaga/68870?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic">
+            <img src="https://media.licdn.com/dms/image/C4D0BAQHWQgLegFbH3g/company-logo_200_200/0/1617678198357?e=2147483647&v=beta&t=QXUwX30BR0Ni2gAowwSJnYo7K8Mwvvtw4FdlZQfCRuQ" alt="Logo Nerdti">
+          </a>
+          <div class="desc">DBA</div>
+          <div class="desc-table">
+            <table class="table">
+              <tr>
+                <td class="material-symbols-outlined">
+                  attach_money</td>
+                <td>A Combilar</td>
+              </tr>
+              <tr>
+                <td class="material-symbols-outlined">
+                  location_on</td>
+                <td>Belém/PA</td>
+                </td>
+              <tr>
+                <td class="material-symbols-outlined">
+                  person</td>
+                <td>Pleno</td>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filterDiv rede">
+      <div class="container"></div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://vivo.gupy.io/jobs/5426919">
+            <img src="https://www.shopping3americas.com.br/wp-content/uploads/sites/13/2023/01/OPENGRAPH-VIVO.png" alt="Logo Vivo">
+          </a>
+          <div class="desc">Analista Telecom Jr - Rede IP </div>
+          <div class="desc-table">
+            <table class="table">
+              <tr>
+                <td class="material-symbols-outlined">
+                  attach_money</td>
+                <td>A Combilar</td>
+              </tr>
+              <tr>
+                <td class="material-symbols-outlined">
+                  location_on</td>
+                <td>São Paulo - SP (Híbrido)</td>
+                </td>
+              <tr>
+                <td class="material-symbols-outlined">
+                  person</td>
+                <td>Júnior</td>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filterDiv dados">
+      <div class="container"></div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://fadesptivagas.vagas.solides.com.br/vaga/308126?origem=linkedin">
+            <img src="https://portalfadesp.org.br/wp-content/uploads/2021/11/WhatsApp-Image-2021-11-19-at-16.23.19.jpeg" alt="Logo Fadesp">
+          </a>
+          <div class="desc">Analista de Dados</div>
+          <div class="desc-table">
+            <table class="table">
+              <tr>
+                <td class="material-symbols-outlined">
+                  attach_money</td>
+                <td>A Combilar</td>
+              </tr>
+              <tr>
+                <td class="material-symbols-outlined">
+                  location_on</td>
+                <td>Bele´m/PA</td>
+                </td>
+              <tr>
+                <td class="material-symbols-outlined">
+                  person</td>
+                <td>Junior</td>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filterDiv frontend">
+      <div class="container"></div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://jobs.jobconvo.com/job/MjY5NzI2MA-desenvolvedora-frontend-angular-pleno-recife/488b2caa-d9a9-4139-ba88-b76690131d2d/?career_page=ddf2b2f5-cc30-4503-8ec8-458f9869e2ba&source=">
+            <img src="https://www2.deloitte.com/content/dam/Deloitte/global/Images/promo_images/gx-deloitte-logo-global.jpg" alt="Logo deloitte">
+          </a>
+          <div class="desc">Front-End</div>
+          <div class="desc-table">
+            <table class="table">
+              <tr>
+                <td class="material-symbols-outlined">
+                  attach_money</td>
+                <td>Compatível Com o Mercado</td>
+              </tr>
+              <tr>
+                <td class="material-symbols-outlined">
+                  location_on</td>
+                <td>Recife</td>
+                </td>
+              <tr>
+                <td class="material-symbols-outlined">
+                  person</td>
+                <td>Pleno</td>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filterDiv backend">
+      <div class="container"></div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.catho.com.br/vagas/desenvolvedor-back-end-senior/24217802/?origem_apply=busca-de-vagas&entrada_apply=direto">
+            <img src="../assets/imgs/logo-reivent.jpg" alt="Logo Reinvent">
+          </a>
+          <div class="desc">Dev. Back-End</div>
+          <div class="desc-table">
+            <table class="table">
+              <tr>
+                <td class="material-symbols-outlined">
+                  attach_money</td>
+                <td>Até R$ 1.000,00</td>
+              </tr>
+              <tr>
+                <td class="material-symbols-outlined">
+                  location_on</td>
+                <td>São Caetano do Sul - SP </td>
+                </td>
+              <tr>
+                <td class="material-symbols-outlined">
+                  person</td>
+                <td>Pleno</td>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filterDiv fullstack">
+      <div class="container"></div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.glassdoor.com.br/Vis%C3%A3o-geral/Trabalhar-na-Maitha-Tech-EI_IE3107983.13,24.htm">
+            <img src="https://media.licdn.com/dms/image/C560BAQF26ki6Qjs7PQ/company-logo_200_200/0/1635953198661?e=1705536000&v=beta&t=SayILO_KWHyTJUU1_Sx7LuHJO_iCRnkCMGLewxRNJ5Y" alt="Logo Maitha Tech">
+          </a>
+          <div class="desc">Dev. FullStack</div>
+          <div class="desc-table">
+            <table class="table">
+              <tr>
+                <td class="material-symbols-outlined">
+                  attach_money</td>
+                <td>A Combilar</td>
+              </tr>
+              <tr>
+                <td class="material-symbols-outlined">
+                  location_on</td>
+                <td>Home Office</td>
+                </td>
+              <tr>
+                <td class="material-symbols-outlined">
+                  person</td>
+                <td>Pleno</td>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filterDiv dados">
+      <div class="container"></div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://operative.bamboohr.com/careers/377?source=aWQ9NA==">
+            <img src="https://media.licdn.com/dms/image/D4E0BAQE0eb3QbC3ePg/company-logo_200_200/0/1681221713206?e=2147483647&v=beta&t=VCi5hnfeMeFumgFYBJJHaZrhHqPru88u5cwyNtk-hOU" alt="Logo  operative">
+          </a>
+          <div class="desc">DBA</div>
+          <div class="desc-table">
+            <table class="table">
+              <tr>
+                <td class="material-symbols-outlined">
+                  attach_money</td>
+                <td>A Combilar</td>
+              </tr>
+              <tr>
+                <td class="material-symbols-outlined">
+                  location_on</td>
+                <td>São Paulo - SP (Híbrido)</td>
+                </td>
+              <tr>
+                <td class="material-symbols-outlined">
+                  person</td>
+                <td>Pleno</td>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filterDiv dados">
+      <div class="container"></div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.catho.com.br/vagas/analista-de-dados/24051796/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic">
+            <img src="https://scontent.fbel12-1.fna.fbcdn.net/v/t39.30808-6/340659879_246474441277714_5998302953915566729_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEmVtVxsWAigmJPxfyP7UQnT1dWXaF64JdPV1ZdoXrgl47XkI5yGGQhZImttTFOkWlVW1bBGKLeKG0zC55WpiA3&_nc_ohc=GgRKxcWn8XQAX-4nTum&_nc_ht=scontent.fbel12-1.fna&oh=00_AfC9Y469UKwd7iYOArgsZQ2v2EKLKc9cQZ3aK4b2xChMcA&oe=653799DC" alt="Logo Green automoveis">
+          </a>
+          <div class="desc">Analista de Dados</div>
+          <div class="desc-table">
+            <table class="table">
+              <tr>
+                <td class="material-symbols-outlined">
+                  attach_money</td>
+                <td>A Combilar</td>
+              </tr>
+              <tr>
+                <td class="material-symbols-outlined">
+                  location_on</td>
+                <td>Belém/PA</td>
+                </td>
+              <tr>
+                <td class="material-symbols-outlined">
+                  person</td>
+                <td>Não Informado</td>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filterDiv rede">
+      <div class="container"></div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.accenture.com/br-pt/careers/jobdetails?src=LINKEDINJP&id=11664329_pt-br">
+            <img src="https://www.cidademarketing.com.br/marketing/wp-content/uploads/2018/10/accenture.jpg" alt="Logo accenture">
+          </a>
+          <div class="desc">Analista de Redes</div>
+          <div class="desc-table">
+            <table class="table">
+              <tr>
+                <td class="material-symbols-outlined">
+                  attach_money</td>
+                <td>A Combilar</td>
+              </tr>
+              <tr>
+                <td class="material-symbols-outlined">
+                  location_on</td>
+                <td>Nova Lima - MG</td>
+                </td>
+              <tr>
+                <td class="material-symbols-outlined">
+                  person</td>
+                <td>Júnior</td>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filterDiv rede">
+      <div class="container"></div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.linkedin.com/jobs/view/3736891970/?alternateChannel=search&refId=oLcX5eTvxCiyPVQV733z8g%3D%3D&trackingId=9iDEWmIPoCXECifYNsr8mw%3D%3D">
+            <img src="https://yt3.googleusercontent.com/DgGfAsvko1YLzfreffDePbjxLccyVFAhTC_aIq_7XDL7EWBWxqi_WU5-nqVNiEOG_-RzAlax0w=s900-c-k-c0x00ffffff-no-rj" alt="Logo Deal">
+          </a>
+          <div class="desc">Analista de Redes</div>
+          <div class="desc-table">
+            <table class="table">
+              <tr>
+                <td class="material-symbols-outlined">
+                  attach_money</td>
+                <td>A Combilar</td>
+              </tr>
+              <tr>
+                <td class="material-symbols-outlined">
+                  location_on</td>
+                <td>São Paulo - SP</td>
+                </td>
+              <tr>
+                <td class="material-symbols-outlined">
+                  person</td>
+                <td>Sênior</td>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filterDiv rede">
+      <div class="container"></div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.linkedin.com/jobs/view/3745090245/?alternateChannel=search&refId=yefRR0EEskdxAlJzGEIDoA%3D%3D&trackingId=SxchV9%2FfO9bwbr93EqMQXw%3D%3D">
+            <img src="https://media.licdn.com/dms/image/C560BAQFEfgN9SbLahg/company-logo_200_200/0/1625150965488?e=1706140800&v=beta&t=99wkr33PurVOxygAC2ymwubEZrcVtezSINYwnCkjmYM" alt="Logo Grupo Easy">
+          </a>
+          <div class="desc">Analista de Redes</div>
+          <div class="desc-table">
+            <table class="table">
+              <tr>
+                <td class="material-symbols-outlined">
+                  attach_money</td>
+                <td>A Combilar</td>
+              </tr>
+              <tr>
+                <td class="material-symbols-outlined">
+                  location_on</td>
+                <td>São Paulo - SP</td>
+                </td>
+              <tr>
+                <td class="material-symbols-outlined">
+                  person</td>
+                <td>Sênior</td>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filterDiv ux-ui-designer">
+      <div class="container"></div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.linkedin.com/jobs/view/3743486068/?alternateChannel=search&refId=q1dwEEI8AMpuA78YAzSeyg%3D%3D&trackingId=NF1kavW2NGttGR9Pf%2F99BQ%3D%3D">
+            <img src="https://www.androidfreeware.mobi/img2/com-doutorie-wpf.jpg" alt="Logo Doutorie">
+          </a>
+          <div class="desc">UX/UI Designer</div>
+          <div class="desc-table">
+            <table class="table">
+              <tr>
+                <td class="material-symbols-outlined">
+                  attach_money</td>
+                <td>A Combilar</td>
+              </tr>
+              <tr>
+                <td class="material-symbols-outlined">
+                  location_on</td>
+                <td>Florianópolis - SC</td>
+                </td>
+              <tr>
+                <td class="material-symbols-outlined">
+                  person</td>
+                <td>Pleno</td>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filterDiv frontend">
+      <div class="container"></div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.turing.com/remote-developer-jobs/j/li-promoted/web-front-end-developer-145467-br?country=Brazil&s=ads_developers_linkedinJobs&n=https://www.turing.com/remote-developer-jobs/j/li-promoted/web-front-end-developer-145467-br?country=Brazil">
+            <img src="https://d2mk45aasx86xg.cloudfront.net/Facebook_OG_C_1200x628_px_02_da3df00cda.png" alt="Logo Turing ">
+          </a>
+          <div class="desc">Dev Web Front-End</div>
+          <div class="desc-table">
+            <table class="table">
+              <tr>
+                <td class="material-symbols-outlined">
+                  attach_money</td>
+                <td>A Combilar</td>
+              </tr>
+              <tr>
+                <td class="material-symbols-outlined">
+                  location_on</td>
+                <td>Home Office</td>
+                </td>
+              <tr>
+                <td class="material-symbols-outlined">
+                  person</td>
+                <td>Pleno</td>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filterDiv backend">
+      <div class="container"></div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.linkedin.com/jobs/view/3739478955/?alternateChannel=search&refId=BgKOtg50cIzD0fmY6M56zA%3D%3D&trackingId=JP%2FYc43NYoakZbSkWOZdQQ%3D%3D">
+            <img src="https://media.licdn.com/dms/image/C4D0BAQHJY10iEnwnvQ/company-logo_100_100/0/1600958671966?e=1706140800&v=beta&t=1zJLIrZVvQ3s0pxeO7n3N8w5PTwwkoCNN9hgll8szBM" alt="Logo Assurance IT">
+          </a>
+          <div class="desc">Desenvolvedor php</div>
+          <div class="desc-table">
+            <table class="table">
+              <tr>
+                <td class="material-symbols-outlined">
+                  attach_money</td>
+                <td>A Combilar</td>
+              </tr>
+              <tr>
+                <td class="material-symbols-outlined">
+                  location_on</td>
+                <td>Limeira - SP</td>
+                </td>
+              <tr>
+                <td class="material-symbols-outlined">
+                  person</td>
+                <td>Pleno</td>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filterDiv ux-ui-designer">
+      <div class="container"></div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.linkedin.com/jobs/view/3744176074/?alternateChannel=search&refId=BgKOtg50cIzD0fmY6M56zA%3D%3D&trackingId=o13BMhxrjB4tDnsP%2BOqv%2BQ%3D%3D">
+            <img src="https://media.licdn.com/dms/image/D4D0BAQEj8P-2NRbONQ/company-logo_100_100/0/1680772822917?e=1706140800&v=beta&t=oCs51V2Zaswn7L5Ae9-OSDjcE99xF0ArrH8R4SmA22g" alt="Logo Exadel">
+          </a>
+          <div class="desc">Dev. Java</div>
+          <div class="desc-table">
+            <table class="table">
+              <tr>
+                <td class="material-symbols-outlined">
+                  attach_money</td>
+                <td>A Combilar</td>
+              </tr>
+              <tr>
+                <td class="material-symbols-outlined">
+                  location_on</td>
+                <td>Home Office</td>
+                </td>
+              <tr>
+                <td class="material-symbols-outlined">
+                  person</td>
+                <td>Sênior</td>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="filterDiv fullstack">
+      <div class="container"></div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.linkedin.com/jobs/view/3728530254/?alternateChannel=search&refId=CUBo44SrcTSl2iZfz01l6w%3D%3D&trackingId=NWC7sBt6%2B6533I%2FhIaGq5g%3D%3D">
+            <img src="https://media.licdn.com/dms/image/D4D0BAQFD40gvtq8O7A/company-logo_100_100/0/1696421615558?e=1706140800&v=beta&t=J5WOBmlHxnESjlkVOyqGjDp5Ih3S8ydmCvCCsbjcX7Q" alt="Logo SIG 2000">
+          </a>
+          <div class="desc">Dev. Fullstack PHP + React</div>
+          <div class="desc-table">
+            <table class="table">
+              <tr>
+                <td class="material-symbols-outlined">
+                  attach_money</td>
+                <td>A Combilar</td>
+              </tr>
+              <tr>
+                <td class="material-symbols-outlined">
+                  location_on</td>
+                <td>Três Rios - RJ</td>
+                </td>
+              <tr>
+                <td class="material-symbols-outlined">
+                  person</td>
+                <td>Pleno</td>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filterDiv ux-ui-designer">
+      <div class="container"></div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://media.licdn.com/dms/image/C4E0BAQFBpF6zbjfuHA/company-logo_100_100/0/1603965679160?e=1706140800&v=beta&t=04AOskq19QdeTj0qi0sBke13eWaJnXJEdmS16KycQuA">
+            <img src="https://media.licdn.com/dms/image/C4E0BAQFBpF6zbjfuHA/company-logo_100_100/0/1603965679160?e=1706140800&v=beta&t=04AOskq19QdeTj0qi0sBke13eWaJnXJEdmS16KycQuA" alt="Logo Prime Nearshore">
+          </a>
+          <div class="desc">UX Designer</div>
+          <div class="desc-table">
+            <table class="table">
+              <tr>
+                <td class="material-symbols-outlined">
+                  attach_money</td>
+                <td>A Combilar</td>
+              </tr>
+              <tr>
+                <td class="material-symbols-outlined">
+                  location_on</td>
+                <td>São Paulo</td>
+                </td>
+              <tr>
+                <td class="material-symbols-outlined">
+                  person</td>
+                <td>Pleno</td>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <br>
+    <br>
+  </section>
+  <footer>
+    <div class="principal">
+      <section class="logo">
+        <img src="../assets/imgs/logo-impulsiona-tech.png" alt="Logo Impulsiona Tech" width="160">
+        <div class="sociais">
+          <a href="" target="_blank"><img src="../assets/imgs/linkedin.png" alt="Link para Linkedin" height="25"></a>
+          <a href="" target="_blank"><img src="../assets/imgs/instagram.png" alt="Link para Instagram" height="25"></a>
+          <a href="" target="_blank"><img src="../assets/imgs/facebook.png" alt="Link para Facebook" height="25"></a>
+          <a href="" target="_blank"><img src="../assets/imgs/twitter-x.png" alt="Link para X-Twitter" height="30"></a>
+        </div>
         <nav>
-          <a href="sobre.html">SOBRE</a>
-          <a href="cursos.html">CURSOS</a>
-          <a href="vagas.html">VAGAS</a>
-          <a href="contato.html">CONTATO</a>
+          <a href="../pages/sobre.html">SOBRE</a>
+          <a href="../pages/cursos.html">CURSOS</a>
+          <a href="../pages/vagas.html">VAGAS</a>
+          <a href="../pages/contato.html">CONTATO</a>
         </nav>
       </section>
-      <section>
+      <section class="parceiros">
         <span>Apoio:</span>
-        <img
-          src="../assets/imgs/proz-aws-talentocloud.png"
-          alt="Proz + AWS + Talento Cloud"
-          width="360"
-        />
+        <img src="../assets/imgs/proz-aws-talentcloud.jpg" alt="Proz + AWS + Talento Cloud" width="360">
       </section>
-      <span
-        >© Copyright 2023 - Impulsiona Tech. - Todos os direitos
-        reservados.</span
-      >
-    </footer>
-  </body>
+    </div>
+    <span>© Copyright 2023 - Impulsiona Tech. - Todos os direitos reservados.</span>
+  </footer>
+  <!-- Script Menu responsivel -->
+  <script>
+    function mostarMenuFluante() {
+      let header = document.querySelector('header');
+      let menu = document.querySelector('.menu');
+      let buttonMenu =  document.querySelector('.button-menu');
+      menu.classList.toggle('expanded-menu');
+      if(menu.classList.contains('expanded-menu')) {
+        header.style.background = 'linear-gradient(145deg, #2D266C 0%, #375ee3 80%)';
+        buttonMenu.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+      } else {
+        header.style.removeProperty('background');
+        buttonMenu.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      }
+    }
+  </script>
+
+  <!-- Script filtro Galeria -->
+  <script>
+    filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+//Adicione a classe ativa ao botão atual (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
 </html>

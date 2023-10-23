@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-Br">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,74 +12,143 @@
   <link rel="stylesheet" href="../assets/styles/cursos.css">
 
   <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
+  <script src="https://kit.fontawesome.com/ade55217c4.js" crossorigin="anonymous"></script>
 
   <title>Impulsiona Tech</title>
 </head>
 
 <body>
-
-  <head>
-    <a href="../index.html"><img src="../assets/imgs/logo-impulsiona-tech.jpg" alt="Logo Impulsiona Tech" width="160"></a>
-    <nav>
+  <header>
+    <a class="home" href="../index.html"><img src="../assets/imgs/logo-impulsiona-tech.png" alt="Logo Impulsiona Tech" width="160"></a>
+    <div role="button" class="button-menu" onclick="mostarMenuFluante()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <nav class="menu">
       <a href="sobre.html">SOBRE</a>
       <a href="cursos.html">CURSOS</a>
       <a href="vagas.html">VAGAS</a>
       <a href="contato.html">CONTATO</a>
-      <img src="../assets/icons/magnifying-glass-solid.svg" alt="Pesquisar" height="15">
+      <img src="../assets/icons/search.svg" alt="Pesquisar">
     </nav>
-  </head>
+  </header>
   <main>  
-    <section>
-      <h3>CURSOS DE TECNOLOGIA</h3>
-      <span>Alguns cursos de tecnologia disponivel gratuitamente. Excelentes para iniciar sua carreira.</span>
-      <h1>Programação</h1>
-      <div class="carousel-container">
-        <div class="carousel-slide">
-          <a href="https://cursos.timtec.com.br/course/desenvolvimento-em-python/intro"><img src="../assets/imgs/python.jpeg" alt="Python"></a>    Desenvolvimento com Python
-          <a href="https://www.ev.org.br/cursos/html-avancado"><img src="../assets/imgs/html.jpeg" alt="HTML"></a>    Html Avançado
-          <a href="https://www.ev.org.br/cursos/introducao-ao-javascript"><img src="../assets/imgs/javascript.jpeg" alt="Javascript"></a>    Introdução ao Javascript
-          <a href="https://www.ev.org.br/cursos/inovando-com-css"><img src="../assets/imgs/css.jpeg" alt="CSS"></a>   Inovando com CSS <br><br>
-        </div>
-      </div>
-     
-      <h1>Análise de Dados</h1>
-      <div class="carousel-container">
-        <div class="carousel-slide">
-          <a href="https://eucapacito.com.br/curso-ec/ciencia-de-dados-primeiros-passos-2"><img src="../assets/imgs/ciencia-de-dados.jpg" alt="Ciencia de Dados"></a>    Ciência de Dados: Primeiros Passos
-          <a href="https://eucapacito.com.br/curso-ec/business-intelligence"><img src="../assets/imgs/business-intelligence.jpg" alt="Business Intelligence"></a>    Business Intelligence <br><br>
-        </div>
-      </div>
+    <section class="titulo">
+      <h1>CURSOS DE TECNOLOGIA</h1><br>
+      <!-- <span>Alguns cursos de tecnologia disponíveis gratuitamente. Excelentes para você iniciar sua carreira.</span><br><br><br> -->
+      <h2>FRONT-END</h2><br>
+    </section>
 
-      <h1>Segurança da Informação</h1>
-      <div class="carousel-container">
-        <div class="carousel-slide">
-          <a href="https://desecsecurity.com/curso/introducao-pentest"><img src="../assets/imgs/pentest.jpg" alt="Pentest"></a>    Introdução ao Pentest na Prática
-          <a href="https://eucapacito.com.br/curso-ec/seguranca-cibernetica-primeiros-passos-ibm"><img src="../assets/imgs/cyber-security.jpeg" alt="Segurança cibernética"></a>    Segurança cibernética – Primeiros passos <br><br>
+    <section class="section_cards">
+        <div class="card">
+            <div class="imagem">
+              <img src="../assets/imgs/html5.png" width="100px" height="110px" alt="HTML">
+            </div>
+            <h3>HTML5 AVANÇADO</h3>
+            <div class="descricao_curso">
+              <p>Nível: Intermediário </p>
+              <p>Carga Horária: 06h</p>
+              <a href="https://www.ev.org.br/cursos/html-avancado">Leia mais</a>
+            </div>
         </div>
+
+        <div class="card">
+            <div class="imagem">
+              <img src="../assets/imgs/css.png" alt="CSS" width="100px" height="110px">
+            </div>
+            <h3>INOVANDO COM CSS</h3>
+            <div class="descricao_curso">
+              <p>Nível: Avançado </p>
+              <p>Carga Horária: 26h</p>
+              <a href="https://www.ev.org.br/cursos/inovando-com-css">Leia mais</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imagem">
+              <img src="../assets/imgs/js.png" alt="Javascript" width="100px" height="110px"/>
+            </div>
+            <h3> INTRODUÇÃO AO JAVASCRIPT</h3>
+            <div class="descricao_curso">
+                <p>Nível: Intermediário </p>
+                <p>Carga Horária: 20h</p>
+                <a href="https://www.ev.org.br/cursos/introducao-ao-javascript">Leia mais</a>
+            </div>
+        </div>
+    </section><br><br>
+
+    <section>
+          <h2>BACK-END</h2><br>
+    </section>
+    <section class="section_cards">
+      <div class="card">
+          <div class="imagem">
+            <img src="../assets/imgs/java.png" width="100px" height="110px" alt="HTML">
+          </div>
+          <h3>PROGRAMAÇÃO JAVA</h3>
+          <div class="descricao_curso">
+            <p>Nível: Avançado </p>
+            <p>Carga Horária: 16h</p>
+            <a href="https://www.ev.org.br/cursos/linguagem-de-programacao-java-avancado">Leia mais</a>
+          </div>
       </div>
-    </section>
-    
-  </main>
+  </section>
+  
+<section>
+    <h2>DEVOPS</h2><br>
+</section>
+<section class="section_cards">
+<div class="card">
+    <div class="imagem">
+      <img src="../assets/imgs/devops.png" width="180px" height="110px" alt="HTML">
+    </div>
+    <h3>DEVOPS & AGILE CULTURE</h3>
+    <div class="descricao_curso">
+      <p>Nível: Intermediário </p>
+      <p>Carga Horária: 60h</p>
+      <a href="https://www.eucapacito.com.br/curso-ec/devops-agile-culture">Leia mais</a>
+    </div>
+</div>
+</section>
+
+  </main><br><br><br>
   <footer>
-    <section>
-      <img src="../assets/imgs/logo-impulsiona-tech.jpg" alt="Logo Impulsiona Tech" width="160">
-      <a href="" target="_blank"><img src="../assets/icons/linkedin.svg" alt="Link para Linkedin" height="25"></a>
-      <a href="" target="_blank"><img src="../assets/icons/instagram.svg" alt="Link para Instagram" height="25"></a>
-      <a href="" target="_blank"><img src="../assets/icons/facebook.svg" alt="Link para Facebook" height="25"></a>
-      <a href="" target="_blank"><img src="../assets/icons/x-twitter.svg" alt="Link para X-Twitter" height="25"></a>
-      <nav>
-        <a href="sobre.html">SOBRE</a>
-        <a href="cursos.html">CURSOS</a>
-        <a href="vagas.html">VAGAS</a>
-        <a href="contato.html">CONTATO</a>
-      </nav>
-    </section>
-    <section>
-      <span>Apoio:</span>
-      <img src="../assets/imgs/proz-aws-talentocloud.png" alt="Proz + AWS + Talento Cloud" width="360">
-    </section>
+    <div class="principal">
+      <section class="logo">
+        <img src="../assets/imgs/logo-impulsiona-tech.png" alt="Logo Impulsiona Tech" width="160">
+        <div class="sociais">
+          <a href="" target="_blank"><img src="../assets/imgs/linkedin.png" alt="Link para Linkedin" height="25"></a>
+          <a href="" target="_blank"><img src="../assets/imgs/instagram.png" alt="Link para Instagram" height="25"></a>
+          <a href="" target="_blank"><img src="../assets/imgs/facebook.png" alt="Link para Facebook" height="25"></a>
+          <a href="" target="_blank"><img src="../assets/imgs/twitter-x.png" alt="Link para X-Twitter" height="30"></a>
+        </div>
+        <nav>
+          <a href="sobre.html">SOBRE</a>
+          <a href="cursos.html">CURSOS</a>
+          <a href="vagas.html">VAGAS</a>
+          <a href="contato.html">CONTATO</a>
+        </nav>
+      </section>
+      <section class="parceiros">
+        <span>Apoio:</span>
+        <img src="../assets/imgs/proz-aws-talentcloud.jpg" alt="Proz + AWS + Talento Cloud" width="360">
+      </section>
+    </div>
     <span>© Copyright 2023 - Impulsiona Tech. - Todos os direitos reservados.</span>
   </footer>
+  <script>
+    function mostarMenuFluante() {
+      let header = document.querySelector('header');
+      let menu = document.querySelector('.menu');
+      let buttonMenu =  document.querySelector('.button-menu');
+      menu.classList.toggle('expanded-menu');
+      if(menu.classList.contains('expanded-menu')) {
+        header.style.background = 'linear-gradient(145deg, #2D266C 0%, #375ee3 80%)';
+        buttonMenu.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+      } else {
+        header.style.removeProperty('background');
+        buttonMenu.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      }
+    }
+  </script>
 </body>
-
 </html>
