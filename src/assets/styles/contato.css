@@ -8,7 +8,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -o-font-smoothing: antialiased;
-    font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
 
@@ -21,11 +20,18 @@ body{
     background: #47b1b1;
 }
 
+main{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
 .container {
     max-width: 400px;
     width: 100%;
     margin: 0 auto;
     position: relative;
+    top: 0px;
     
 }
 
@@ -105,4 +111,12 @@ body{
         box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
     }
 
-    
+    @media (max-width: 768px) {
+        .container {
+          padding-top: 75px;  
+          position: relative;
+          display: flow-root;
+          height: auto;
+          width: 100%;
+        }
+    }

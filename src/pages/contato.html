@@ -19,12 +19,15 @@
 
 <body>
   <header>
-    <a href="../index.html"><img src="../assets/imgs/logo-impulsiona-tech.png" alt="Logo Impulsiona Tech" width="160"></a>
-    <nav>
-      <a href="../pages/sobre.html">SOBRE</a>
-      <a href="../pages/cursos.html">CURSOS</a>
-      <a href="../pages/vagas.html">VAGAS</a>
-      <a href="../pages/contato.html">CONTATO</a>
+    <a class="home" href="../index.html"><img src="../assets/imgs/logo-impulsiona-tech.png" alt="Logo Impulsiona Tech" width="160"></a>
+    <div role="button" class="button-menu" onclick="mostarMenuFluante()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <nav class="menu">
+      <a href="sobre.html">SOBRE</a>
+      <a href="cursos.html">CURSOS</a>
+      <a href="vagas.html">VAGAS</a>
+      <a href="contato.html">CONTATO</a>
       <img src="../assets/icons/search.svg" alt="Pesquisar">
     </nav>
   </header>
@@ -65,10 +68,10 @@
             <a href="" target="_blank"><img src="../assets/imgs/twitter-x.png" alt="Link para X-Twitter" height="30"></a>
           </div>
           <nav>
-            <a href="./sobre.html">SOBRE</a>
-            <a href="./cursos.html">CURSOS</a>
-            <a href="./vagas.html">VAGAS</a>
-            <a href="./contato.html">CONTATO</a>
+            <a href="sobre.html">SOBRE</a>
+            <a href="cursos.html">CURSOS</a>
+            <a href="vagas.html">VAGAS</a>
+            <a href="contato.html">CONTATO</a>
           </nav>
         </section>
         <section class="parceiros">
@@ -78,5 +81,17 @@
       </div>
       <span>© Copyright 2023 - Impulsiona Tech. - Todos os direitos reservados.</span>
     </footer>
+    <script>
+      function mostarMenuFluante() {
+        let menu = document.querySelector('.menu');
+        let buttonMenu =  document.querySelector('.button-menu');
+        menu.classList.toggle('expanded-menu');
+        if(menu.classList.contains('expanded-menu')) {
+          buttonMenu.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        } else {
+          buttonMenu.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        }
+      }
+    </script>
 </body>
 </html>
