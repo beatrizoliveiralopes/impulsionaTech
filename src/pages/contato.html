@@ -37,24 +37,40 @@
                 <h3>Formulário de Contato</h3>
                 <fieldset>
                     <input placeholder="Digite seu nome" type="text" tabindex="1" required autofocus>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <small>Mensagem de erro</small>
                 </fieldset>
                 <fieldset>
                     <input placeholder="Informe seu email" type="email" tabindex="2" required>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <small>Mensagem de erro</small>
                 </fieldset>
                 <fieldset>
-                    <input placeholder="Telefone para contato (opicional)" type="tel" tabindex="3">
+                    <input placeholder="Telefone para contato " type="tel" pattern="[0-9]{2}[0-9]{5}[0-9]{4}" tabindex="3" required>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <small>Mensagem de erro</small>
                 </fieldset>
                 <fieldset>
                     <input placeholder="Informe seu site (opcional)" type="url" tabindex="4">
                 </fieldset>
                 <fieldset>
                     <textarea placeholder="Escreva aqui sua mensagem..." type="email" tabindex="5" required></textarea>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <small>Mensagem de erro</small>
                 </fieldset>
                 <fieldset>
                     <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Cadastrar</button>
                 </fieldset>
             </form>
         </div> 
+        <script
+          src="https://kit.fontawesome.com/f9e19193d6.js"
+          crossorigin="anonymous"
+        ></script>
     </main> 
     
     <footer>
