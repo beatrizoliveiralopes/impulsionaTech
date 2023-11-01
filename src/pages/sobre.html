@@ -16,6 +16,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/ade55217c4.js" crossorigin="anonymous"></script>
   <script src="../assets/js/database.js" defer></script>
+  <script src="../assets/js/sobre.js" defer></script>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
+  <script src="../assets/js/global.js" defer></script>
 
   <title>Impulsiona Tech</title>
 </head>
@@ -58,90 +61,7 @@
       </div>
       <!--cards-->
       <div class="sub-card">
-        <div class="teams">
-          <img class="img-card" src="../assets/imgs/beatriz.jpg" alt="Imagem da BEATRIZ">
-          <h2 class="name">Beatriz</h2>
-          <div class="about">
-            <p>É Analista de Sistemas pelo IFTM - Campus Paracatu.<br />Atualmente é servidora público federal atuando
-              na área de Infraestrutura de Redes e Servidores.
-            </p>
-          </div>
-          <div class="social-links">
-            <a href="https://br.linkedin.com/in/beatriz-oliveira-lopes-0930b562" target="_blank"><i
-                class="fa fa-linkedin-square" style="font-size:36px;color:#1c5ece"></i></a>
-            <a href="https://github.com/beatrizoliveiralopes"><i class="fa fa-github" style="font-size:36px"></i></a>
-          </div>
-        </div>
-
-        <div class="teams">
-          <img class="img-card" src="../assets/imgs/deyvison.jpg" alt="Imagem do Deyvison">
-          <h2 class="name">Deyvison</h2>
-          <div class="about">
-            <p>Formado em Análise e Desenvolvimento de Sistemas pela Universidade da Amazônia, desde 2015.<br />
-              Possui experiência em desenvolvimento Front-End.
-              Trabalhou em instituições públicas e privadas
-            </p>
-          </div>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/deyvison-viana-paes-71236a5a" target="_blank"><i
-                class="fa fa-linkedin-square" style="font-size:36px;color:#1c5ece"></i></a>
-            <a href="https://github.com/DeyvisonViana" target="_blank"><i class="fa fa-github"
-                style="font-size:36px"></i></a>
-          </div>
-        </div>
-
-        <div class="teams">
-          <img class="img-card" src="../assets/imgs/leandro.jpg" alt="Imagem do LEANDRO">
-          <h2 class="name">Leandro</h2>
-          <div class="about">
-            <p>Cursando Análise e Desenvolvimento de Sistemas na Uniasselvi.<br />
-              Em processo de transição de carreira, saindo do comércio para ingressar no mundo da tecnologia.
-            </p>
-          </div>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/leandro-guimar%C3%A3es-aa7115249?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              target="_blank"><i class="fa fa-linkedin-square" style="font-size:36px;color:#1c5ece"></i></a>
-            <a href="https://github.com/LeandroGuimaraes23" target="_blank"><i class="fa fa-github"
-                style="font-size:36px"></i></a>
-          </div>
-        </div>
-
-        <div class="teams">
-          <img class="img-card" src="../assets/imgs/LUAN.jpg" alt="Imagem do LUAN">
-          <h2 class="name">LuanG</h2>
-          <div class="about">
-            <p>Graduado em Bacharelado em TI e em Engenharia de Computação, ambas pela Universidade Federal Rural do
-              Semi-Árido/UFERSA.<br />
-              Tenho experiência em back-end (API REST) com Node.js, graças a um projeto de iniciação científica e um
-              estágio.
-            </p>
-          </div>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/luan-guilherme-dantas-3a57a3130/?originalSubdomain=br"
-              target="_blank"><i class="fa fa-linkedin-square" style="font-size:36px;color:#1c5ece"></i></a>
-            <a href="https://github.com/LuanGDantas" target="_blank"><i class="fa fa-github"
-                style="font-size:36px"></i></a>
-          </div>
-        </div>
-
-        <div class="teams">
-          <img class="img-card" src="../assets/imgs/sabrina.jpg" alt="Imagem da SABRINA">
-          <h2 class="name">Sabrina</h2>
-          <div class="about">
-            <p>Estou em transiçõo de carreira minha atuação no mercado de trabalho era Inspetora de Controle de
-              Qualidade.<br />
-              Atualmente cursando Análise e Desenvolvimento de Dados.
-            </p>
-          </div>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/sabrina-dias-inspetoradequalidade/" target="_blank"><i
-                class="fa fa-linkedin-square" style="font-size:36px;color:#1c5ece"></i></a>
-            <a href="https://github.com/sabrinaflorenco" target="_blank"><i class="fa fa-github"
-                style="font-size:36px"></i></a>
-          </div>
-        </div>
       </div>
-    </div>
 
 
   </main>
@@ -170,21 +90,13 @@
     </div>
     <span>© Copyright 2023 - Impulsiona Tech. - Todos os direitos reservados.</span>
   </footer>
-  <script>
-    function mostarMenuFluante() {
-      let header = document.querySelector('header');
-      let menu = document.querySelector('.menu');
-      let buttonMenu =  document.querySelector('.button-menu');
-      menu.classList.toggle('expanded-menu');
-      if(menu.classList.contains('expanded-menu')) {
-        header.style.background = 'linear-gradient(145deg, #2D266C 0%, #375ee3 80%)';
-        buttonMenu.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-      } else {
-        header.style.removeProperty('background');
-        buttonMenu.innerHTML = '<i class="fa-solid fa-bars"></i>';
-      }
-    }
-  </script>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+ 
 </body>
 
 </html>
