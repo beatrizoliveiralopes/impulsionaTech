@@ -42,11 +42,14 @@ const database = {
     ],
     membros: [
         {
-            nome: '',
-            descricao: '',
-            github: '',
-            linkedin: '',
-            foto: '' 
+            nome: 'Beatriz',
+            descricao: 'É Analista de Sistemas pelo IFTM - Campus Paracatu.Atualmente é servidora público federal atuando na área de Infraestrutura de Redes e Servidores.',
+            github: 'https://github.com/beatrizoliveiralopes',
+            linkedin: 'https://br.linkedin.com/in/beatriz-oliveira-lopes-0930b562',
+            foto: '../assets/imgs/beatriz.jpg' 
+        },
+        {
+            
         }
     ],
     feedbacks: [
