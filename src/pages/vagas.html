@@ -18,6 +18,9 @@
   <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
   <script src="https://kit.fontawesome.com/ade55217c4.js" crossorigin="anonymous"></script>
   <script src="../assets/js/database.js" defer></script>
+  <script src="../assets/js/vagas-filtro.js" defer></script>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
+  <script src="../assets/js/global.js" defer></script>
 
   <title>Impulsiona Tech</title>
 </head>
@@ -186,7 +189,7 @@
           <a target="_blank" href="https://vivo.gupy.io/jobs/5426919">
             <img src="https://www.shopping3americas.com.br/wp-content/uploads/sites/13/2023/01/OPENGRAPH-VIVO.png" alt="Logo Vivo">
           </a>
-          <div class="desc">Analista Telecom Jr - Rede IP </div>
+          <div class="desc">Analista Telecom Jr</div>
           <div class="desc-table">
             <table class="table">
               <tr>
@@ -720,68 +723,13 @@
     </div>
     <span>© Copyright 2023 - Impulsiona Tech. - Todos os direitos reservados.</span>
   </footer>
-  <!-- Script Menu responsivel -->
-  <script>
-    function mostarMenuFluante() {
-      let header = document.querySelector('header');
-      let menu = document.querySelector('.menu');
-      let buttonMenu =  document.querySelector('.button-menu');
-      menu.classList.toggle('expanded-menu');
-      if(menu.classList.contains('expanded-menu')) {
-        header.style.background = 'linear-gradient(145deg, #2D266C 0%, #375ee3 80%)';
-        buttonMenu.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-      } else {
-        header.style.removeProperty('background');
-        buttonMenu.innerHTML = '<i class="fa-solid fa-bars"></i>';
-      }
-    }
-  </script>
-
-  <!-- Script filtro Galeria -->
-  <script>
-    filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-//Adicione a classe ativa ao botão atual (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-</script>
+  <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
 
 </body>
 </html>
