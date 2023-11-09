@@ -14,12 +14,11 @@
 
   <link rel="stylesheet" href="../assets/styles/global.css">
   <link rel="stylesheet" href="../assets/styles/contato.css">
-
-  <link rel="js" href="../assets/js/contato.js">
   
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
   <script src="../assets/js/database.js" defer></script>
   <script src="../assets/js/global.js" defer></script>
+  <script src="../assets/js/contato.js" defer></script>
 
   <title>Impulsiona Tech</title>
 </head>
@@ -40,48 +39,48 @@
   </header>
     <main>
         <div class="container">
-          <script 
-           link rel="js" href="../assets/js/contato.js">
-        </script>
-            <form id="contact" action="" method="post">
+            <form id="contact" action="">
                 <h3>Formulário de Contato</h3>
                 <fieldset class="form-control">
-                    <input id="username" placeholder="Digite seu nome..." type="text" tabindex="1" required autofocus>
-                    <i class="fas fa-exclamation-circle"></i>
-                    <i class="fas fa-check-circle"></i>
-                    <small>Mensagem de erro</small>
+                    <div class="input-container">
+                      <input id="username" type="text" name="username" placeholder="Digite seu nome" tabindex="1" required autofocus>
+                      <i id="username-icon" class="material-symbols-rounded">check_circle</i>
+                    </div>
+                    <small id="username-helper" class="helper-text">Mensagem de erro</small>
                 </fieldset>
                 <fieldset class="form-control" >
-                    <input id="email" placeholder="Informe seu email" type="email" tabindex="2" required>
-                    <i class="fas fa-exclamation-circle"></i>
-                    <i class="fas fa-check-circle"></i>
-                    <small>Mensagem de erro</small>
+                    <div class="input-container">
+                      <input id="email" type="email" name="email" placeholder="Informe seu email" tabindex="2" required>
+                      <i id="email-icon" class="material-symbols-rounded">check_circle</i>
+                    </div>
+                    <small id="email-helper" class="helper-text">Mensagem de erro</small>
                 </fieldset>
                 <fieldset class="form-control" >
-                    <input id="tel" placeholder="Telefone para contato " type="tel" pattern="[0-9]{2}[0-9]{5}[0-9]{4}" tabindex="3" required>
-                    <i class="fas fa-exclamation-circle"></i>
-                    <i class="fas fa-check-circle"></i>
-                    <small>Mensagem de erro</small>
+                    <div class="input-container">
+                      <input id="tel" type="tel" name="phone" placeholder="Telefone para contato (opcional)" tabindex="3">
+                      <i id="tel-icon" class="material-symbols-rounded">check_circle</i>
+                    </div>
+                    <small id="tel-helper" class="helper-text">Mensagem de erro</small>
                 </fieldset>
                 <fieldset class="form-control" >
-                    <input  id="url" placeholder="Informe seu site (opcional)" type="url" tabindex="4">
+                    <div class="input-container">
+                      <input id="url" type="url" name="site" placeholder="Informe seu site (opcional)" tabindex="4">
+                      <i id="url-icon" class="material-symbols-rounded">check_circle</i>
+                    </div>
+                    <small id="url-helper" class="helper-text">Mensagem de erro</small>
                 </fieldset>
                 <fieldset class="form-control" >
-                    <textarea id="textarea" placeholder="Escreva aqui sua mensagem..." type="email" tabindex="5" required></textarea>
-                    <i class="fas fa-exclamation-circle"></i>
-                    <i class="fas fa-check-circle"></i>
-                    <small>Mensagem de erro</small>
+                  <div class="input-container">
+                    <textarea id="message" type="text" name="message" placeholder="Escreva aqui sua mensagem..." tabindex="5" required></textarea>
+                    <i id="message-icon" class="material-symbols-rounded">check_circle</i>
+                  </div>
+                    <small id="message-helper" class="helper-text">Mensagem de erro</small>
                 </fieldset>
                 <fieldset>
-                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Cadastrar</button>
+                    <button id="contact-submit" type="submit" data-submit="...Sending" tabindex="6">Cadastrar</button>
                 </fieldset>
             </form>
         </div> 
-        <script
-          src="https://kit.fontawesome.com/f9e19193d6.js"
-          crossorigin="anonymous"
-        ></script>
-        
 
     </main> 
     
@@ -109,20 +108,5 @@
       </div>
       <span>© Copyright 2023 - Impulsiona Tech. - Todos os direitos reservados.</span>
     </footer>
-    <script>
-      function mostarMenuFluante() {
-        let header = document.querySelector('header');
-        let menu = document.querySelector('.menu');
-        let buttonMenu =  document.querySelector('.button-menu');
-        menu.classList.toggle('expanded-menu');
-        if(menu.classList.contains('expanded-menu')) {
-          header.style.background = 'linear-gradient(145deg, #2D266C 0%, #375ee3 80%)';
-          buttonMenu.innerHTML = '<i class="material-symbols-rounded">close</i>';
-        } else {
-          header.style.removeProperty('background');
-          buttonMenu.innerHTML = '<i class="material-symbols-rounded">menu</i>';
-        }
-      }
-    </script>
 </body>
 </html>

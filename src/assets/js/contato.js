@@ -1,67 +1,142 @@
-document.addEventListener("DOMContentLoaded", function () {
-  var contactForm = document.getElementById("contact");
-  var username = document.getElementById("username");
-  var email = document.getElementById("email");
-  var tel = document.getElementById("tel");
-  var url = document.getElementById("url");
-  var textarea = document.getElementById("textarea");
 
-  contactForm.addEventListener("submit", function (event) {
-      var isValid = true;
+const stringEmptyRegex = /^\s*$/;
+const emailRegex = /^[a-zA-Z0-9._\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}$/;
+const phoneRegex = /^[0-9]{2}[0-9]{5}[0-9]{4}$/;
+const urlRegex = /^(http|https):\/\/[^ "]+$/;
 
-      if (username.value.trim() === "") {
-          displayError(username, "Por favor, preencha seu nome.");
-          isValid = false;
-      }
+function isEmpty(value) {
+  return stringEmptyRegex.test(value);
+}
+function isValidEmail(email) {
+  return emailRegex.test(email);
+}
+function isValidPhoneNumber(phone) {
+return phoneRegex.test(phone);
+}
+function isValidURL(url) {
+  return urlRegex.test(url);
+}
 
-      if (!isValidEmail(email.value)) {
-          displayError(email, "Por favor, insira um e-mail válido.");
-          isValid = false;
-      }
+function styleIncorrectInput(input, helper, icon) {
+  icon.innerText = 'error';
+  icon.classList.remove('check-icon');
+  icon.classList.add('error-icon');
+  helper.classList.add('visible');
+  input.classList.remove('correct');
+  input.classList.add('incorrect');
+}
 
-      if (!isValidPhoneNumber(tel.value)) {
-          displayError(tel, "Por favor, insira um número de telefone válido (10 dígitos).");
-          isValid = false;
-      }
+function styleCorrectInput(input, helper, icon) {
+  icon.innerText = 'check_circle';
+  icon.classList.remove('error-icon');
+  icon.classList.add('check-icon');
+  helper.classList.remove('visible');
+  input.classList.remove('incorrect');
+  input.classList.add('correct');
+}
 
-      if (url.value.trim() !== "" && !isValidURL(url.value)) {
-          displayError(url, "Por favor, insira uma URL válida (http://www.example.com).");
-          isValid = false;
-      }
-
-      if (textarea.value.trim() === "") {
-          displayError(textarea, "Por favor, escreva sua mensagem.");
-          isValid = false;
-      }
-
-      if (!isValid) {
-          event.preventDefault();
-      }
-  });
-
-  function isValidEmail(email) {
-      var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-      return email.match(emailRegex);
+let checkInputs = {
+  name: false,
+  email: false,
+  phone: true,
+  site: true,
+  message: false
+}
+let usernameInput = document.getElementById('username');
+let usernameHelper = document.getElementById('username-helper');
+let usernameIcon = document.getElementById('username-icon');
+usernameInput.setAttribute('minlength', '3');
+usernameInput.addEventListener('change', (e)=> {
+  let value = e.target.value;
+  if (isEmpty(value)) {
+    checkInputs.name = false;
+    usernameHelper.innerText = 'Nome não informado. Campo Obrigatório.';
+    return styleIncorrectInput(usernameInput, usernameHelper, usernameIcon);
   }
-
-  function isValidPhoneNumber(phone) {
-      var phoneRegex = /^\d{10}$/;
-      return phone.match(phoneRegex);
+  if (value.length < 3) {
+    checkInputs.name = false;
+    usernameHelper.innerText = 'Campo nome precisa ter 3 ou mais caracteres.';
+    return styleIncorrectInput(usernameInput, usernameHelper, usernameIcon);
   }
+  checkInputs.name = true; 
+  return styleCorrectInput(usernameInput, usernameHelper, usernameIcon);
+});
 
-  function isValidURL(url) {
-      var urlRegex = /^(http|https):\/\/[^ "]+$/;
-      return url.match(urlRegex);
+let emailInput = document.getElementById('email');
+let emailHelper = document.getElementById('email-helper');
+let emailIcon = document.getElementById('email-icon');
+emailInput.setAttribute('pattern', emailRegex.toString().slice(1, -1));
+emailInput.addEventListener('change', (e) => {
+  let value = e.target.value;
+  if (isEmpty(value)) {
+    checkInputs.email = false;
+    emailHelper.innerText = 'E-mail não informado. Campo Obrigatório.'
+    return styleIncorrectInput(emailInput, emailHelper, emailIcon);
+  } 
+  if (!isValidEmail(value)) {
+    checkInputs.email = false;
+    emailHelper.innerText = 'E-mail inválido.'
+    return styleIncorrectInput(emailInput, emailHelper, emailIcon);
   }
+  checkInputs.email = true;
+  return styleCorrectInput(emailInput, emailHelper, emailIcon);
+});
 
-  function displayError(input, message) {
-      var parentField = input.parentElement;
-      var errorIcon = parentField.querySelector("i.fa-exclamation-circle");
-      var errorMessage = parentField.querySelector("small");
+let telInput = document.getElementById('tel');
+let telHelper = document.getElementById('tel-helper');
+let telIcon = document.getElementById('tel-icon');
+telInput.setAttribute('pattern', phoneRegex.toString().slice(1, -1));
+telInput.addEventListener('change', (e) => {
+  let value = e.target.value;
+  if(!isEmpty(value) && !isValidPhoneNumber(value)) {
+    checkInputs.phone = false;
+    telHelper.innerText = 'Número de telefone inválido. Informe apenas números (11 dígitos).';
+    return styleIncorrectInput(telInput, telHelper, telIcon);
+  }
+  checkInputs.phone = true;
+  return styleCorrectInput(telInput, telHelper, telIcon);
+});
 
-      input.classList.add("error");
-      input.classList.remove("valid");
-      errorIcon.style.visibility = "visible";
-      errorMessage.textContent = message;
+let urlInput = document.getElementById('url');
+let urlHelper = document.getElementById('url-helper');
+let urlIcon = document.getElementById('url-icon');
+urlInput.setAttribute('pattern', urlRegex.toString().slice(1, -1));
+urlInput.addEventListener('change', (e) => {
+  let value = e.target.value;
+  if(!isEmpty(value) && !isValidURL(value)) {
+    checkInputs.site = false;
+    urlHelper.innerText = 'URL inválida. Informe uma URL válida (http://www.example.com)';
+    return styleIncorrectInput(urlInput, urlHelper, urlIcon);
+  }
+  checkInputs.site = true;
+  return styleCorrectInput(urlInput, urlHelper, urlIcon);
+});
+
+let messageInput = document.getElementById("message");
+let messageHelper = document.getElementById("message-helper");
+let messageIcon = document.getElementById('message-icon');
+messageInput.setAttribute('minlength', '10');
+messageInput.addEventListener('change', (e) => {
+  let value = e.target.value;
+  if (isEmpty(value)){
+    checkInputs.message = false;
+    messageHelper.innerText = 'Mensagem não informada. Campo Obrigatório.';
+    return styleIncorrectInput(messageInput, messageHelper, messageIcon);
+  }
+  if (value.length < 10){
+    checkInputs.message = false;
+    messageHelper.innerText = 'Campo mensagem precisa ter 10 ou mais caracteres.';
+    return styleIncorrectInput(messageInput, messageHelper, messageIcon);
+  }
+  checkInputs.message = true;
+  return styleCorrectInput(messageInput, messageHelper, messageIcon);
+});
+
+let contactForm = document.getElementById("contact");
+contactForm.addEventListener("submit", function (event) {
+  if (Object.values(checkInputs).includes(false)) {
+    event.preventDefault();
+  } else {
+    alert('Formulário enviado com sucesso!');
   }
 });
