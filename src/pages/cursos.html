@@ -16,6 +16,8 @@
 
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
   <script src="../assets/js/database.js" defer></script>
+  <script src="../assets/js/cursos.js" defer></script>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
   <script src="../assets/js/global.js" defer></script>
 
   <title>Impulsiona Tech</title>
@@ -29,90 +31,33 @@
     </div>
     <nav class="menu">
       <a href="sobre.html">SOBRE</a>
+      <a href="areas.html">ÁREAS</a>
       <a href="cursos.html">CURSOS</a>
       <a href="vagas.html">VAGAS</a>
       <a href="contato.html">CONTATO</a>
-      <img src="../assets/icons/search.svg" alt="Pesquisar">
     </nav>
   </header>
   <main>  
     <section class="titulo">
       <h1>CURSOS DE TECNOLOGIA</h1><br>
       <!-- <span>Alguns cursos de tecnologia disponíveis gratuitamente. Excelentes para você iniciar sua carreira.</span><br><br><br> -->
-      <h2>FRONT-END</h2><br>
+      <!-- <h2>FRONT-END</h2> -->
+      <br>
     </section>
+
+    <div id="group" class="container">
+            
+    </div>
+
+    <p id="output">
+
+    </p>
 
     <section class="section_cards">
         <div class="card">
-            <div class="imagem">
-              <img src="../assets/imgs/html5.png" width="100px" height="110px" alt="HTML">
-            </div>
-            <h3>HTML5 AVANÇADO</h3>
-            <div class="descricao_curso">
-              <p>Nível: Intermediário </p>
-              <p>Carga Horária: 06h</p>
-              <a href="https://www.ev.org.br/cursos/html-avancado">Leia mais</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="imagem">
-              <img src="../assets/imgs/css.png" alt="CSS" width="100px" height="110px">
-            </div>
-            <h3>INOVANDO COM CSS</h3>
-            <div class="descricao_curso">
-              <p>Nível: Avançado </p>
-              <p>Carga Horária: 26h</p>
-              <a href="https://www.ev.org.br/cursos/inovando-com-css">Leia mais</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="imagem">
-              <img src="../assets/imgs/js.png" alt="Javascript" width="100px" height="110px"/>
-            </div>
-            <h3> INTRODUÇÃO AO JAVASCRIPT</h3>
-            <div class="descricao_curso">
-                <p>Nível: Intermediário </p>
-                <p>Carga Horária: 20h</p>
-                <a href="https://www.ev.org.br/cursos/introducao-ao-javascript">Leia mais</a>
-            </div>
+           
         </div>
     </section><br><br>
-
-    <section>
-          <h2>BACK-END</h2><br>
-    </section>
-    <section class="section_cards">
-      <div class="card">
-          <div class="imagem">
-            <img src="../assets/imgs/java.png" width="100px" height="110px" alt="HTML">
-          </div>
-          <h3>PROGRAMAÇÃO JAVA</h3>
-          <div class="descricao_curso">
-            <p>Nível: Avançado </p>
-            <p>Carga Horária: 16h</p>
-            <a href="https://www.ev.org.br/cursos/linguagem-de-programacao-java-avancado">Leia mais</a>
-          </div>
-      </div>
-  </section>
-  
-<section>
-    <h2>DEVOPS</h2><br>
-</section>
-<section class="section_cards">
-<div class="card">
-    <div class="imagem">
-      <img src="../assets/imgs/devops.png" width="180px" height="110px" alt="HTML">
-    </div>
-    <h3>DEVOPS & AGILE CULTURE</h3>
-    <div class="descricao_curso">
-      <p>Nível: Intermediário </p>
-      <p>Carga Horária: 60h</p>
-      <a href="https://www.eucapacito.com.br/curso-ec/devops-agile-culture">Leia mais</a>
-    </div>
-</div>
-</section>
 
   </main><br><br><br>
   <footer>
@@ -127,6 +72,7 @@
         </div>
         <nav>
           <a href="sobre.html">SOBRE</a>
+          <a href="areas.html">ÁREAS</a>
           <a href="cursos.html">CURSOS</a>
           <a href="vagas.html">VAGAS</a>
           <a href="contato.html">CONTATO</a>
@@ -139,20 +85,13 @@
     </div>
     <span>© Copyright 2023 - Impulsiona Tech. - Todos os direitos reservados.</span>
   </footer>
-  <script>
-    function mostarMenuFluante() {
-      let header = document.querySelector('header');
-      let menu = document.querySelector('.menu');
-      let buttonMenu =  document.querySelector('.button-menu');
-      menu.classList.toggle('expanded-menu');
-      if(menu.classList.contains('expanded-menu')) {
-        header.style.background = 'linear-gradient(145deg, #2D266C 0%, #375ee3 80%)';
-        buttonMenu.innerHTML = '<i class="material-symbols-rounded">close</i>';
-      } else {
-        header.style.removeProperty('background');
-        buttonMenu.innerHTML = '<i class="material-symbols-rounded">menu</i>';
-      }
-    }
-  </script>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  
 </body>
 </html>

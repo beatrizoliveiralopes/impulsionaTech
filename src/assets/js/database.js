@@ -1,41 +1,41 @@
 const database = {
     areas: [
         {
-            imagem: 'https://source.unsplash.com/mKhPLJ5JQI4',
-            titulo: 'Front-end',
+            imagem: 'assets/imgs/front-end.png',
+            titulo: 'FRONT-END',
             area: 'Desenvolvimento de software', 
             descricao: 'É a área da programação que se dedica a criar a parte visual e interativa de um site, aplicativo ou software. É o que o usuário vê e usa quando acessa uma plataforma digital.',
         },
         {
-            imagem: 'https://source.unsplash.com/64YrPKiguAE',
-            titulo: 'Back-end',
+            imagem: 'assets/imgs/backend.png',
+            titulo: 'BACK-END',
             area: 'Desenvolvimento de software', 
             descricao: 'É a área que faz a ponte entre os dados que vem do navegador rumo ao banco de dados e vice-versa, sempre aplicando as devidas regras de negócio e validações.',
         },
         {
-            imagem: 'https://source.unsplash.com/YXC9PuBblTA',
-            titulo: 'Full-stack',
+            imagem: 'assets/imgs/full_stack.png',
+            titulo: 'FULL-STACK',
             area: 'Desenvolvimento de software', 
             descricao: 'É a área que engloba tanto a parte da interação do usuário em um site ou aplicativo (front-end) quanto a parte de armazenamento e processamento de informações no servidor (back-end).',
         },
         {
-            imagem: '',
+            imagem: 'assets/imgs/devops.png',
             titulo: 'DevOps',
             area: 'Infrestrurtara e Cloud Computing', 
             descricao: 'É a área responsável por aplicar um conjunto de práticas e processos que visam acelerar e automatizar aspectos dos processos de desenvolvimento, testes e lançamento de softwares.',
         },
         {
-            imagem: '',
-            titulo: 'Ánalise de dados',
+            imagem: 'assets/imgs/analise-de-dados.png',
+            titulo: 'ANÁLISE DE DADOS',
             area: 'Ciência de dados', 
             descricao: 'É a área que transforma números e informações em insights para a tomada de decisão, utilizando de técnicas estatísticas e lógicas',
         },
         {
-            imagem: 'https://source.unsplash.com/ydArxOA1uSM',
-            titulo: 'Segurança da Informação',
+            imagem: 'assets/imgs/seguranca-informacao.png',
+            titulo: 'SEGURANÇA DA INFORMAÇÃO',
             area: '', 
             descricao: 'É a área da informática que tem a missão de proteger todas as informações e dados que circulam na rede.',
-        }
+        },
     ],
     cursos: [
         {
@@ -44,7 +44,8 @@ const database = {
             nivel: 'Inciante',
             cargaHoraria: '5h',
             comCertificado: true,
-            link: 'https://www.rocketseat.com.br/discover'
+            link: 'https://www.rocketseat.com.br/discover',
+            area: 'FRONT-END'
         },
         {
             imagem: 'https://i.postimg.cc/XY8Mz62H/Java-Script.png',
@@ -52,7 +53,8 @@ const database = {
             nivel: 'Inciante',
             cargaHoraria: '40h',
             comCertificado: false,
-            link: 'https://cubos.academy/lp/minicurso-javascript-do-zero'
+            link: 'https://cubos.academy/lp/minicurso-javascript-do-zero',
+            area: 'FRONT-END'
         },
         {
             imagem: 'https://i.postimg.cc/K8dT9KWD/seguran-a-informacao.jpg',
@@ -60,7 +62,8 @@ const database = {
             nivel: 'Inciante',
             cargaHoraria: '20h',
             comCertificado: true,
-            link: 'https://www.cursoemvideo.com/curso/seguranca-da-informacao-modulo-01-20-horas/'
+            link: 'https://www.cursoemvideo.com/curso/seguranca-da-informacao-modulo-01-20-horas/',
+            area: 'SEGURANÇA DA INFORMAÇÃO'
         },
         {
             imagem: 'https://source.unsplash.com/o1SKqmgSDbg',
@@ -68,7 +71,8 @@ const database = {
             nivel: 'Inciante',
             cargaHoraria: '5h',
             comCertificado: false,
-            link: 'https://cubos.academy/lp/minicurso-javascript-do-zero'
+            link: 'https://cubos.academy/lp/minicurso-javascript-do-zero',
+            area: 'FRONT-END'
         },
         {
             imagem: 'https://i.postimg.cc/k5grrYzn/git.png',
@@ -76,7 +80,8 @@ const database = {
             nivel: 'Inciante',
             cargaHoraria: '20h',
             comCertificado: true,
-            link: 'https://www.cursoemvideo.com/curso/curso-de-git-e-github/'
+            link: 'https://www.cursoemvideo.com/curso/curso-de-git-e-github/',
+            area: 'DevOps'
         },
         {
             imagem: 'https://i.postimg.cc/nzxDJyps/pinguim-linux.png',
@@ -84,7 +89,8 @@ const database = {
             nivel: 'Inciante',
             cargaHoraria: '40h',
             comCertificado: true,
-            link: 'https://www.cursoemvideo.com/curso/linux/'
+            link: 'https://www.cursoemvideo.com/curso/linux/',
+            area: 'SEGURANÇA DA INFORMAÇÃO'
         },
         {
             imagem: 'https://i.postimg.cc/s26k39C5/algoritmo.png',
@@ -92,7 +98,8 @@ const database = {
             nivel: 'Inciante',
             cargaHoraria: '40h',
             comCertificado: true,
-            link: 'https://www.cursoemvideo.com/curso/curso-de-algoritmo/'
+            link: 'https://www.cursoemvideo.com/curso/curso-de-algoritmo/',
+            area: 'BACK-END'
         },
         {
             imagem: 'https://i.postimg.cc/02XDwXd3/sistema-html-para-o-conceito-de-sites.jpg',
@@ -100,7 +107,8 @@ const database = {
             nivel: 'Inciante',
             cargaHoraria: '40h',
             comCertificado: true,
-            link: 'https://www.cursoemvideo.com/curso/html5/'
+            link: 'https://www.cursoemvideo.com/curso/html5/',
+            area: 'FRONT-END'
         },
         {
             imagem: 'https://i.postimg.cc/RZ3fQ1g0/curso-online.png',
@@ -108,7 +116,8 @@ const database = {
             nivel: 'Inciante',
             cargaHoraria: '40h',
             comCertificado: true,
-            link: 'https://www.cursoemvideo.com/curso/java-basico/'
+            link: 'https://www.cursoemvideo.com/curso/java-basico/',
+            area: 'BACK-END'
         },
         {
             imagem: 'https://source.unsplash.com/ZGvS7H9nYbk',
@@ -116,7 +125,8 @@ const database = {
             nivel: 'Inciante',
             cargaHoraria: '20h',
             comCertificado: true,
-            link: 'https://www.cursoemvideo.com/curso/redes-de-computadores/'
+            link: 'https://www.cursoemvideo.com/curso/redes-de-computadores/',
+            area: 'SEGURANÇA DA INFORMAÇÃO'
         },
     ],
     vagas: [
