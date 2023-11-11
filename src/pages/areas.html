@@ -17,6 +17,8 @@
 
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
   <script src="../assets/js/database.js" defer></script>
+  <script src="../assets/js/areas.js" defer></script>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
   <script src="../assets/js/global.js" defer></script>
 
   <title>Impulsiona Tech</title>
@@ -30,11 +32,11 @@
       <i class="material-symbols-rounded">menu</i>
     </div>
     <nav class="menu">
-      <a href="sobre.html">SOBRE</a>
-      <a href="cursos.html">CURSOS</a>
-      <a href="vagas.html">VAGAS</a>
-      <a href="contato.html">CONTATO</a>
-      <img src="../assets/icons/search.svg" alt="Pesquisar">
+          <a href="sobre.html">SOBRE</a>
+          <a href="areas.html">ÁREAS</a>
+          <a href="cursos.html">CURSOS</a>
+          <a href="vagas.html">VAGAS</a>
+          <a href="contato.html">CONTATO</a>
     </nav>
   </header>
   <main>  
@@ -44,81 +46,9 @@
     <!-- <span>Segue abaixo algumas áreas da tecnologia da informação.</span> -->
       <section class="container">
         <section class="card__container">
-          <div class="card__bx" style="--clr: #89ec5b">
-            <div class="card__data">
-              <div class="card__icon">
-                <img src="../assets/imgs/front-end.png" width="83px" height="80px"/>
-              </div>
-              <div class="card__content">
-                <h4>FRONT-END</h4>
-                <p>É a área da programação que se dedica a criar a parte visual e interativa de um site, aplicativo ou software. É o que o usuário vê e usa quando acessa uma plataforma digital.</p>
-              </div>
-            </div>
-          </div>
-          <div class="card__bx" style="--clr: #eb5ae5">
-            <div class="card__data">
-              <div class="card__icon">
-                <img src="../assets/imgs/backend.png" width="80px" height="80px"/>
-              </div>
-              <div class="card__content">
-                <h4>BACK-END</h4>
-                <p>É a área que faz a ponte entre os dados que vem do navegador rumo ao banco de dados e vice-versa, sempre aplicando as devidas regras de negócio e validações.</p>
-              </div>
-            </div>
-          </div>
-          <div class="card__bx" style="--clr: #5b98eb">
-            <div class="card__data">
-              <div class="card__icon">
-                <img src="../assets/imgs/full_stack.png" width="110px" height="90px"/>
-              </div>
-              <div class="card__content">
-                <h4>FULL STACK</h4>
-                <p>É a área que engloba tanto a parte da interação do usuário em um site ou aplicativo (front-end) quanto a parte de armazenamento e processamento de informações no servidor (back-end).</p>                
-              </div>
-            </div>
-          </div>
-          
-          <div class="card__bx" style="--clr: #F5EA85">
-            <div class="card__data">
-              <div class="card__icon">
-                <img src="../assets/imgs/devops.png" width="80px" height="50px"/>
-              </div>
-              <div class="card__content">
-                <h4>DEVOPS</h4>
-                <p>É a área responsável por aplicar um conjunto de práticas e processos que visam acelerar e automatizar aspectos dos processos de desenvolvimento, testes e lançamento de softwares.
-                  <!-- , sites e aplicativos, permitindo a entrega contínua e atualizações de segurança. </p>                 -->
-              </div>
-            </div>
-          </div>
-
-          <div class="card__bx" style="--clr: #ee5050">
-            <div class="card__data">
-              <div class="card__icon">
-                <img src="../assets/imgs/analise-de-dados.png" width="80px" height="80px"/>
-              </div>
-              <div class="card__content">
-                <h4>ÁNALISE DE DADOS</h4>
-                <p>É a área que transforma números e informações em insights para a tomada de decisão, utilizando de técnicas estatísticas e lógicas. 
-                  <!-- Apesar de ser usada em diferentes áreas, é no universo corporativo que a técnica ganha destaque.</p>                 -->
-              </div>
-            </div>
-          </div>
-
-          <div class="card__bx" style="--clr: #ff06acec">
-            <div class="card__data">
-              <div class="card__icon">
-                <img src="../assets/imgs/seguranca-informacao.png" width="80px" height="80px"/>
-              </div>
-              <div class="card__content">
-                <h4>SEGURANÇA DA INFORMAÇÃO</h4>
-                <p>É a área da informática que tem a missão de proteger todas as informações e dados que circulam na rede.
-                   <!-- A segurança da informação está fundamentada em quatro pilares: confidencialidade, integridade, disponibilidade e autenticidade. -->
-                </p>
-              </div>
-            </div>
-          </div>
-    </section>
-    
+        
+        </section>
+      </section>   
   </main>
   <footer>
     <div class="principal">
@@ -132,6 +62,7 @@
         </div>
         <nav>
           <a href="sobre.html">SOBRE</a>
+          <a href="areas.html">ÁREAS</a>
           <a href="cursos.html">CURSOS</a>
           <a href="vagas.html">VAGAS</a>
           <a href="contato.html">CONTATO</a>
@@ -144,20 +75,13 @@
     </div>
     <span>© Copyright 2023 - Impulsiona Tech. - Todos os direitos reservados.</span>
   </footer>
-  <script>
-    function mostarMenuFluante() {
-      let header = document.querySelector('header');
-      let menu = document.querySelector('.menu');
-      let buttonMenu =  document.querySelector('.button-menu');
-      menu.classList.toggle('expanded-menu');
-      if(menu.classList.contains('expanded-menu')) {
-        header.style.background = 'linear-gradient(145deg, #2D266C 0%, #375ee3 80%)';
-        buttonMenu.innerHTML = '<i class="material-symbols-rounded">close</i>';
-      } else {
-        header.style.removeProperty('background');
-        buttonMenu.innerHTML = '<i class="material-symbols-rounded">menu</i>';
-      }
-    }
-  </script>
+  
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
 </body>
 </html>

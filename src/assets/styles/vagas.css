@@ -134,6 +134,17 @@ select::-ms-expand {
   color: #23b499;
 }
 
+button.readmore__toggle {
+  display: flex;
+  margin-top: 1rem;
+  border: none;
+  background: linear-gradient(0deg, rgba(23,111,234,1) 0%, rgba(4,38,252,1) 100%);
+  color: #ffffff;
+  padding: .8rem;
+  cursor: pointer;
+  border-radius: 2rem;
+}
+
 /*Fim do Select*/
 
   @media only screen and (max-width: 1024px) {
