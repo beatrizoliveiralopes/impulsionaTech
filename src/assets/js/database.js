@@ -128,6 +128,15 @@ const database = {
             link: 'https://www.cursoemvideo.com/curso/redes-de-computadores/',
             area: 'SEGURANÇA DA INFORMAÇÃO'
         },
+        {
+            imagem: 'https://images.app.goo.gl/kr5W8LahnDsaZKvS9',
+            titulo: 'Introdução à Análise de Dados - Microsoft Power BI',
+            nivel: 'Iniciante',
+            cargaHoraria: '05h',
+            comCertificado: true,
+            link: 'https://www.ev.org.br/cursos/introducao-a-analise-de-dados-microsoft-power-bi',
+            area: 'ANÁLISE DE DADOS'
+        }
     ],
     vagas: [
         {
